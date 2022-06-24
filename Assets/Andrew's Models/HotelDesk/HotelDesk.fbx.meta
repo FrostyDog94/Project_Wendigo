@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7695dd3fa2a085a4c96ca38de7d4ef31
+guid: bde1a4e261a24ff4ca7277d0c1be7295
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 2bb9d5b7fc6564f42828aabfe82029d6, type: 2}
+      name: Desk
+    second: {fileID: 2100000, guid: 80850281d7f2fcf4889cac08cef105c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Desktop
+    second: {fileID: 2100000, guid: b12bb0460e3733a42847fc483fb2e1d8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
