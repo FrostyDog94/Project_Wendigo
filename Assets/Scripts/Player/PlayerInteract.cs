@@ -7,6 +7,8 @@ public class PlayerInteract : MonoBehaviour
     public float interactDistance = 3.0f;
     public Transform cam;
     AudioSource aud;
+    public AudioClip doorOpen;
+    public AudioClip doorLocked;
 
     private void Start()
     {
@@ -21,12 +23,18 @@ public class PlayerInteract : MonoBehaviour
 
         if (hit.transform != null)
         {
-            if (Input.GetMouseButtonDown(0) && hit.transform.tag == "Door")
-            {
-                transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
-                transform.rotation = hit.transform.rotation;
-                aud.Play();
-            }
+            if (Input.GetMouseButtonDown(0))
+                if (hit.transform.tag == "Door")
+                {
+                    {
+                        transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
+                        transform.rotation = hit.transform.rotation;
+                        aud.PlayOneShot(doorOpen, 1);
+                    }
+                } else if (hit.transform.tag == "Locked Door")
+                {
+                    aud.PlayOneShot(doorLocked, 1);
+                }
         }
     }
 }
