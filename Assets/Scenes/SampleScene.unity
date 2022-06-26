@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 5c6a82e136dc4e448a65b74bf52498ca, type: 2}
 --- !u!1001 &4730693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +261,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f425c186f0fb6d94a8fffd12b26073ce, type: 3}
+--- !u!1 &13481506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13481507}
+  - component: {fileID: 13481510}
+  - component: {fileID: 13481509}
+  - component: {fileID: 13481508}
+  m_Layer: 0
+  m_Name: WaypointGraphic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13481507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13481506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 520842764}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &13481508
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13481506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &13481509
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13481506}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 508034a288a9bc540b4d501873f3aca4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &13481510
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13481506}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &27981907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -1156,7 +1253,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &133296443
 PrefabInstance:
@@ -1237,7 +1334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134542643}
   m_Layer: 0
-  m_Name: Buildings
+  m_Name: _Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,7 +1385,7 @@ Transform:
   - {fileID: 1829577072}
   - {fileID: 779583186}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &139807852
 PrefabInstance:
@@ -1826,6 +1923,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &188920048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188920049}
+  m_Layer: 0
+  m_Name: Waypoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &188920049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188920048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.555218, y: 0.39823914, z: 8.290882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1239094844}
+  m_Father: {fileID: 578825613}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189382634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e3404012d7d2b745b3a6f0c6e16a5c7, type: 3}
@@ -2444,7 +2573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327589907}
   m_Layer: 0
-  m_Name: Hotel_Interior
+  m_Name: _Hotel Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,7 +2620,7 @@ Transform:
   - {fileID: 1204687331}
   - {fileID: 1386933576}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335696428 stripped
 GameObject:
@@ -2671,6 +2800,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &345161523
@@ -2727,6 +2864,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -2823,6 +2968,79 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 8e3404012d7d2b745b3a6f0c6e16a5c7, type: 3}
+--- !u!1001 &364764227
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_Name
+      value: Wendigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 038be48f21e2d4844a35224d50aa5462, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
 --- !u!1 &365316984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -2842,6 +3060,50 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 88f8289e23247af429370ea445159df7, type: 3}
+--- !u!1 &365944323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+  m_PrefabInstance: {fileID: 364764227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &365944327
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365944323}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &365944328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365944323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666961f4805081a47b124732607618d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 520842764}
+  - {fileID: 1527820084}
+  - {fileID: 1998869041}
+  - {fileID: 188920049}
 --- !u!1 &380579440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -3065,6 +3327,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -3445,6 +3715,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &461967203 stripped
@@ -3628,6 +3906,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f8289e23247af429370ea445159df7, type: 3}
+--- !u!1 &474915872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6427901228945084884, guid: ee6beb17f4c853943ab891aadee8ea70, type: 3}
+  m_PrefabInstance: {fileID: 364764227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &474915875
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474915872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.27419186
+  m_Height: 1.5920941
+  m_Direction: 1
+  m_Center: {x: -0.047894478, y: 0.83648044, z: 0.07215962}
 --- !u!1001 &478917821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4144,6 +4441,38 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &520842763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520842764}
+  m_Layer: 0
+  m_Name: Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520842764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520842763}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.144783, y: 0.39823914, z: 8.140881}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 13481507}
+  m_Father: {fileID: 578825613}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521764418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -4476,7 +4805,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553653189 stripped
 GameObject:
@@ -4590,6 +4919,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ce8e96038607485468a4d057928dead1, type: 3}
   m_PrefabInstance: {fileID: 1407245508}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &578825612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578825613}
+  m_Layer: 0
+  m_Name: _Waypoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &578825613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578825612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.755218, y: -0.39823914, z: 32.209118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 520842764}
+  - {fileID: 1527820084}
+  - {fileID: 1998869041}
+  - {fileID: 188920049}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &581170618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4851,6 +5215,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -5495,7 +5867,7 @@ RectTransform:
   m_Children:
   - {fileID: 1420027933}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5595,7 +5967,7 @@ Transform:
   - {fileID: 549851870}
   - {fileID: 1478642191}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &677161323
 PrefabInstance:
@@ -5802,7 +6174,7 @@ Transform:
   m_Children:
   - {fileID: 452288455}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 87.262, y: -30, z: 0}
 --- !u!1 &706284059 stripped
 GameObject:
@@ -6068,6 +6440,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -6735,6 +7115,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
       propertyPath: m_TagString
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
@@ -8183,6 +8571,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &954981366 stripped
@@ -8338,7 +8734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983009901 stripped
 GameObject:
@@ -9152,6 +9548,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1056528302
@@ -9297,6 +9701,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1080352816
@@ -9353,6 +9765,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -9618,6 +10038,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &1136776165 stripped
@@ -9713,6 +10141,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1158705770
@@ -9770,6 +10206,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!4 &1158705771 stripped
@@ -9796,6 +10240,103 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+--- !u!1 &1162560090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162560091}
+  - component: {fileID: 1162560094}
+  - component: {fileID: 1162560093}
+  - component: {fileID: 1162560092}
+  m_Layer: 0
+  m_Name: WaypointGraphic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162560091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162560090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998869041}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1162560092
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162560090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1162560093
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162560090}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 508034a288a9bc540b4d501873f3aca4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1162560094
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162560090}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1169036142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -9869,6 +10410,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -10094,6 +10643,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -10359,6 +10916,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1214670153
@@ -10489,6 +11054,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &1216963114 stripped
@@ -10613,6 +11186,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1229760008
@@ -10669,6 +11250,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -10760,6 +11349,103 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: f425c186f0fb6d94a8fffd12b26073ce, type: 3}
+--- !u!1 &1239094843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239094844}
+  - component: {fileID: 1239094847}
+  - component: {fileID: 1239094846}
+  - component: {fileID: 1239094845}
+  m_Layer: 0
+  m_Name: WaypointGraphic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239094844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239094843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 188920049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1239094845
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239094843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1239094846
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239094843}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 508034a288a9bc540b4d501873f3aca4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1239094847
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239094843}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1247360104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10829,6 +11515,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f425c186f0fb6d94a8fffd12b26073ce, type: 3}
+--- !u!1 &1248526500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248526501}
+  - component: {fileID: 1248526504}
+  - component: {fileID: 1248526503}
+  - component: {fileID: 1248526502}
+  m_Layer: 0
+  m_Name: WaypointGraphic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248526501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248526500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1527820084}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1248526502
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248526500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1248526503
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248526500}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 508034a288a9bc540b4d501873f3aca4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1248526504
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248526500}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1252948223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f425c186f0fb6d94a8fffd12b26073ce, type: 3}
@@ -11505,6 +12288,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &1344657592
@@ -11684,6 +12475,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -13804,6 +14603,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1488936327
@@ -13929,6 +14736,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
       propertyPath: m_Name
       value: Hotel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
@@ -14336,6 +15151,38 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 8e3404012d7d2b745b3a6f0c6e16a5c7, type: 3}
+--- !u!1 &1527820083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527820084}
+  m_Layer: 0
+  m_Name: Waypoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527820084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527820083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.034782, y: 0.39823914, z: -35.90912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1248526501}
+  m_Father: {fileID: 578825613}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535065060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14390,6 +15237,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -14485,7 +15340,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1544749771
 PrefabInstance:
@@ -15213,6 +16068,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1628912153
@@ -15269,6 +16132,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -16462,6 +17333,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1 &1734898781 stripped
@@ -16593,6 +17472,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -17076,6 +17963,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -17594,6 +18489,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
@@ -18459,6 +19362,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodHouse (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
 --- !u!1001 &1956176137
@@ -18636,8 +19547,8 @@ GameObject:
   m_Name: DoorPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1988264832
 Transform:
@@ -18723,6 +19634,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f8289e23247af429370ea445159df7, type: 3}
+--- !u!1 &1998869040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998869041}
+  m_Layer: 0
+  m_Name: Waypoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998869041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998869040}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.755219, y: 0.39823914, z: -34.60912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1162560091}
+  m_Father: {fileID: 578825613}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2007475573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -19735,6 +20678,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
