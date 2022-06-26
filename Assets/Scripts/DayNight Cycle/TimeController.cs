@@ -24,6 +24,9 @@ public class TimeController : MonoBehaviour
     public Color dayAmbientLight;
     public Color nightAmbientLight;
 
+    public float dayExposure;
+    public float nightExposure;
+
     public AnimationCurve lightChangeCurve;
 
     public float maxSunlightIntensity;
@@ -103,5 +106,6 @@ public class TimeController : MonoBehaviour
         sunLight.intensity = Mathf.Lerp(0, maxSunlightIntensity, lightChangeCurve.Evaluate(dotProduct));
         moonLight.intensity = Mathf.Lerp(maxMoonlightIntensity, 0, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
+        RenderSettings.skybox.SetFloat("_Exposure", Mathf.Lerp(nightExposure, dayExposure, lightChangeCurve.Evaluate(dotProduct)));
     }
 }

@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -26,8 +26,8 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f5701394f6dc0b94ca90b90658de9d63, type: 2}
-  m_HaloStrength: 0.373
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  m_HaloStrength: 0
   m_FlareStrength: 0
   m_FlareFadeSpeed: 10.76
   m_HaloTexture: {fileID: 0}
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 452288456}
+  m_Sun: {fileID: 705507994}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1018,8 +1018,10 @@ MonoBehaviour:
   sunLight: {fileID: 705507994}
   sunriseHour: 7
   sunsetHour: 20.5
-  dayAmbientLight: {r: 0.617168, g: 0.62300134, b: 0.6320754, a: 0}
+  dayAmbientLight: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
   nightAmbientLight: {r: 0, g: 0, b: 0, a: 0}
+  dayExposure: 1
+  nightExposure: 0
   lightChangeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1044,7 +1046,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxSunlightIntensity: 1
+  maxSunlightIntensity: 0.5
   moonLight: {fileID: 1539788357}
   maxMoonlightIntensity: 0
 --- !u!4 &133055261
