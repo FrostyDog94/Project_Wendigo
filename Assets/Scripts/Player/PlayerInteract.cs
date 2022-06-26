@@ -9,6 +9,9 @@ public class PlayerInteract : MonoBehaviour
     AudioSource aud;
     public AudioClip doorOpen;
     public AudioClip doorLocked;
+    public AudioClip lightSwitch;
+
+    public Light flashlight;
 
     private void Start()
     {
@@ -35,6 +38,12 @@ public class PlayerInteract : MonoBehaviour
                 {
                     aud.PlayOneShot(doorLocked, 1);
                 }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);
+            aud.PlayOneShot(lightSwitch, 1);
         }
     }
 }
