@@ -89,7 +89,7 @@ public class TimeController : MonoBehaviour
             TimeSpan sunsetToSunriseDuration = CalculateTimeDifference(sunsetTime, sunriseTime);
             TimeSpan timeSinceSunset = CalculateTimeDifference(sunsetTime, currentTime.TimeOfDay);
 
-            double percentage = timeSinceSunset.TotalMinutes / sunsetToSunriseDuration.TotalMinutes;
+            double percentage = (timeSinceSunset.TotalMinutes / sunsetToSunriseDuration.TotalMinutes);
 
             sunLightRotation = Mathf.Lerp(180, 360, (float)percentage);
         }
