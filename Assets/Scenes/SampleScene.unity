@@ -1947,7 +1947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188920048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.555218, y: 0.39823914, z: 8.290882}
+  m_LocalPosition: {x: 23.9, y: 0.39823914, z: 6.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2201,7 +2201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224061118}
   - component: {fileID: 224061119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2801,6 +2801,10 @@ PrefabInstance:
       value: WoodHouse
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -2864,6 +2868,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -3104,6 +3112,126 @@ MonoBehaviour:
   - {fileID: 1527820084}
   - {fileID: 1998869041}
   - {fileID: 188920049}
+  chaseSpeed: 15
+  patrolSpeed: 3.5
+--- !u!114 &365944331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365944323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76887e145b0850741afab8863e206433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 20
+  angle: 90
+  player: {fileID: 0}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  canSeePlayer: 0
+--- !u!82 &365944332
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365944323}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 74d9055d35aa8f441869dfb5cbd8d73c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 40
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &380579440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88f8289e23247af429370ea445159df7, type: 3}
@@ -3327,6 +3455,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -3714,6 +3846,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -4465,7 +4601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520842763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.144783, y: 0.39823914, z: 8.140881}
+  m_LocalPosition: {x: -25.5, y: 0.39823914, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5215,6 +5351,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -6442,6 +6582,10 @@ PrefabInstance:
       value: WoodHouse (11)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -7111,6 +7255,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
       propertyPath: m_Name
       value: Door2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 188b5e696fc6caa46b313659f92913b6, type: 3}
       propertyPath: m_TagString
@@ -8572,6 +8720,10 @@ PrefabInstance:
       value: WoodHouse (21)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -9549,6 +9701,10 @@ PrefabInstance:
       value: WoodHouse (24)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -9702,6 +9858,10 @@ PrefabInstance:
       value: WoodHouse (28)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -9765,6 +9925,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -10039,6 +10203,10 @@ PrefabInstance:
       value: WoodHouse (23)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -10142,6 +10310,10 @@ PrefabInstance:
       value: WoodHouse (12)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -10205,6 +10377,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -10410,6 +10586,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -10643,6 +10823,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -10917,6 +11101,10 @@ PrefabInstance:
       value: WoodHouse (14)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -11055,6 +11243,10 @@ PrefabInstance:
       value: WoodHouse (20)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -11187,6 +11379,10 @@ PrefabInstance:
       value: WoodHouse (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -11250,6 +11446,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -12289,6 +12489,10 @@ PrefabInstance:
       value: WoodHouse (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -12475,6 +12679,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -13378,6 +13586,10 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: a23d8e81ff66ea24ba63a144ed778f4e, type: 2}
+    - target: {fileID: 6817638360860843948, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391142, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: Loop
       value: 0
@@ -13489,6 +13701,14 @@ PrefabInstance:
     - target: {fileID: 6817638361354391147, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: m_Name
       value: Super First Person Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817638361354391147, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817638361354391147, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
@@ -14604,6 +14824,10 @@ PrefabInstance:
       value: WoodHouse (29)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -14736,6 +14960,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
       propertyPath: m_Name
       value: Hotel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c1bef4ead1a91fb46830d4ebe6e5a826, type: 3}
       propertyPath: m_NavMeshLayer
@@ -15175,7 +15403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527820083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.034782, y: 0.39823914, z: -35.90912}
+  m_LocalPosition: {x: -25.5, y: 0.39823914, z: -32.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15237,6 +15465,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -16069,6 +16301,10 @@ PrefabInstance:
       value: WoodHouse (15)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -16132,6 +16368,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -17334,6 +17574,10 @@ PrefabInstance:
       value: WoodHouse (26)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -17472,6 +17716,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -17963,6 +18211,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -18489,6 +18741,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -19363,6 +19619,10 @@ PrefabInstance:
       value: WoodHouse (9)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -19543,7 +19803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1988264832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19658,7 +19918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998869040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.755219, y: 0.39823914, z: -34.60912}
+  m_LocalPosition: {x: 23.6, y: 0.39823914, z: -32.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20678,6 +20938,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_Name
       value: WoodHouse (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 673d4163cc4bd1645b4ced35fa62d6c5, type: 3}
       propertyPath: m_NavMeshLayer

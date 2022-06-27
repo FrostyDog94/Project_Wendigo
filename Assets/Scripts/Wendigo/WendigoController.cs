@@ -9,12 +9,20 @@ public class WendigoController : MonoBehaviour
     public Transform[] waypoints;
     int n;
     Animator anim;
+    FieldOfView fov;
+    public float chaseSpeed;
+    public float patrolSpeed;
+    AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        fov = GetComponent<FieldOfView>();
+        aud = GetComponent<AudioSource>();
+        aud.pitch = 0.75f;
+       
         n = 0;
     }
 
@@ -32,6 +40,23 @@ public class WendigoController : MonoBehaviour
         if (n >= waypoints.Length)
         {
             n = 0;
+        }
+
+        if (fov.canSeePlayer)
+        {
+            anim.SetBool("isRunning", true);
+            agent.destination = fov.player.transform.position;
+            agent.speed = chaseSpeed;
+            aud.pitch = 2;
+            
+        } else
+        {
+            agent.destination = waypoints[n].position;
+            anim.SetBool("isRunning", false);
+            agent.speed = patrolSpeed;
+            aud.pitch = 0.75f;
+            
+
         }
     }
 }
