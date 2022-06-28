@@ -16,10 +16,10 @@ public class TimeController : MonoBehaviour
     public float sunriseHour;
     public float sunsetHour;
 
-    DateTime currentTime;
+    public DateTime currentTime;
 
-    TimeSpan sunriseTime;
-    TimeSpan sunsetTime;
+    public TimeSpan sunriseTime;
+    public TimeSpan sunsetTime;
 
     public Color dayAmbientLight;
     public Color nightAmbientLight;

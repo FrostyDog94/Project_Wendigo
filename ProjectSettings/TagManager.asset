@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Locked Door
+  - Wendigo
   layers:
   - Default
   - TransparentFX

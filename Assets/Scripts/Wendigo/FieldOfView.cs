@@ -21,7 +21,7 @@ public class FieldOfView : MonoBehaviour
         StartCoroutine(FOVRoutine());
     }
 
-    private IEnumerator FOVRoutine()
+    public IEnumerator FOVRoutine()
     {
         float delay = 0.2f;
         WaitForSeconds wait = new WaitForSeconds(delay);
@@ -42,7 +42,7 @@ public class FieldOfView : MonoBehaviour
             Transform target = rangeChecks[0].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
             
-
+            
             if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
@@ -67,5 +67,12 @@ public class FieldOfView : MonoBehaviour
         {
             canSeePlayer = false;
         }
+
+        
+    }
+
+    public void startFOVRoutine()
+    {
+        StartCoroutine(FOVRoutine());
     }
 }

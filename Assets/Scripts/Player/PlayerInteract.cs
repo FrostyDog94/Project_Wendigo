@@ -13,6 +13,8 @@ public class PlayerInteract : MonoBehaviour
 
     public Light flashlight;
 
+    public GameObject gameOverScreen;
+
     private void Start()
     {
         aud = GetComponent<AudioSource>();
@@ -46,4 +48,15 @@ public class PlayerInteract : MonoBehaviour
             aud.PlayOneShot(lightSwitch, 1);
         }
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Wendigo")
+        {
+            gameOverScreen.SetActive(true);
+            Debug.Log("Success");
+        }
+    }
+
 }
