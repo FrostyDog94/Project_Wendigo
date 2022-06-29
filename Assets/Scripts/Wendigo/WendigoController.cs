@@ -27,7 +27,7 @@ public class WendigoController : MonoBehaviour
         aud = GetComponent<AudioSource>();
         aud.pitch = 0.75f;
         n = Random.Range(0, waypoints.Length - 1);
-        playerSpotted = false;
+        
         
     }
 
@@ -35,7 +35,11 @@ public class WendigoController : MonoBehaviour
     void Update()
     {
         agent.SetDestination(destination);
-        
+
+       /* if (Vector3.Distance(this.transform.position, fov.player.transform.position) <= 5)
+        {
+            ChasePlayer();
+        }*/
 
         if (agent.transform.position == agent.destination)
         {
@@ -51,7 +55,6 @@ public class WendigoController : MonoBehaviour
         if (playerSpotted)
         {
             ChasePlayer();
-            Debug.Log(destination);
         }
         else
         {
