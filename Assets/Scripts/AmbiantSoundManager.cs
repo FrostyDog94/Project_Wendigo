@@ -29,7 +29,7 @@ public class AmbiantSoundManager : MonoBehaviour
             nightAudio.volume = 0;
         } else
         {
-            dayAudio.volume = Mathf.Lerp(0, 0.1f, audioChangeCurve.Evaluate(timeController.dotProduct));
+            dayAudio.volume = Mathf.Lerp(0, 0.5f, audioChangeCurve.Evaluate(timeController.dotProduct));
             nightAudio.volume = Mathf.Lerp(0.5f, 0, audioChangeCurve.Evaluate(timeController.dotProduct));
         }
     }
