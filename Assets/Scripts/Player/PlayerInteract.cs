@@ -10,14 +10,18 @@ public class PlayerInteract : MonoBehaviour
     public AudioClip doorOpen;
     public AudioClip doorLocked;
     public AudioClip lightSwitch;
+    public AudioClip nightAmbiance;
 
     public Light flashlight;
 
     public GameObject gameOverScreen;
 
+    public bool inside;
+
     private void Start()
     {
         aud = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -42,11 +46,16 @@ public class PlayerInteract : MonoBehaviour
                 }
         }
 
+
+
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);
             aud.PlayOneShot(lightSwitch, 1);
         }
+
+
     }
 
 
@@ -56,6 +65,25 @@ public class PlayerInteract : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             Debug.Log("Success");
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Interior")
+        {
+            inside = true;
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Interior")
+        {
+            inside = false;
         }
     }
 

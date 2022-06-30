@@ -35,6 +35,9 @@ public class TimeController : MonoBehaviour
 
     public float maxMoonlightIntensity;
 
+    public float dotProduct;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,7 +105,7 @@ public class TimeController : MonoBehaviour
 
     void UpdateLightSettings()
     {
-        float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
+        dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
         sunLight.intensity = Mathf.Lerp(0, maxSunlightIntensity, lightChangeCurve.Evaluate(dotProduct));
         moonLight.intensity = Mathf.Lerp(maxMoonlightIntensity, 0, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));

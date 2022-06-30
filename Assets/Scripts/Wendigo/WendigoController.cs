@@ -69,7 +69,7 @@ public class WendigoController : MonoBehaviour
         destination = fov.player.transform.position;
         anim.SetBool("isRunning", true);
         agent.speed = chaseSpeed;
-        aud.pitch = 2;
+        aud.pitch = 3;
         
     }
 
