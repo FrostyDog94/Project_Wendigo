@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public float interactDistance = 3.0f;
+    public float interactDistance = 5.0f;
     public Transform cam;
     AudioSource aud;
     public AudioClip doorOpen;
@@ -18,10 +18,11 @@ public class PlayerInteract : MonoBehaviour
 
     public bool inside;
 
+
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        
+
     }
 
     // Update is called once per frame
@@ -30,9 +31,11 @@ public class PlayerInteract : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
 
+        //Open doors
         if (hit.transform != null)
         {
             if (Input.GetMouseButtonDown(0))
+            {
                 if (hit.transform.tag == "Door")
                 {
                     {
@@ -40,15 +43,19 @@ public class PlayerInteract : MonoBehaviour
                         transform.rotation = hit.transform.rotation;
                         aud.PlayOneShot(doorOpen, 1);
                     }
-                } else if (hit.transform.tag == "Locked Door")
+                }
+                else if (hit.transform.tag == "Locked Door")
                 {
                     aud.PlayOneShot(doorLocked, 1);
-                }
+                } 
+            }
+
+    
         }
 
 
 
-
+        //Flashlight
         if (Input.GetKeyDown(KeyCode.F))
         {
             flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);

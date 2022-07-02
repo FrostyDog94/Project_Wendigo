@@ -8,6 +8,7 @@ TagManager:
   - Locked Door
   - Wendigo
   - Interior
+  - Bed
   layers:
   - Default
   - TransparentFX
