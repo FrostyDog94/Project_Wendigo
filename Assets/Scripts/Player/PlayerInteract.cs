@@ -40,7 +40,7 @@ public class PlayerInteract : MonoBehaviour
                 {
                     {
                         transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
-                        transform.rotation = hit.transform.rotation;
+                        transform.rotation = hit.transform.GetComponent<DoorController>().doorPosition.rotation;
                         aud.PlayOneShot(doorOpen, 1);
                     }
                 }
