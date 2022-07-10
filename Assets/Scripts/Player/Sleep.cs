@@ -26,7 +26,7 @@ public class Sleep : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && hit.transform != null)
         {
 
             if (hit.transform.tag == "Bed")
