@@ -1534,14 +1534,22 @@ public class SUPERCharacterAIO : MonoBehaviour{
                 _3rdPersonCharacterAnimator.SetFloat(a_velocity, 0);   
         }
     }
+
+    // Added to allow calling this function as a UnityEvent
+    public void PausePlayer_FreezeInPlace() {
+        PausePlayer(PauseModes.FreezeInPlace);
+    }
+
     public void UnpausePlayer(float delay = 0){
-        if(delay==0){
-            controllerPaused = false;
-            p_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-            p_Rigidbody.isKinematic = false;
-        }
-        else{
-            StartCoroutine(UnpausePlayerI(delay));
+        if (controllerPaused) {
+            if(delay==0){
+                controllerPaused = false;
+                p_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+                p_Rigidbody.isKinematic = false;
+            }
+            else{
+                StartCoroutine(UnpausePlayerI(delay));
+            }
         }
     }
     IEnumerator UnpausePlayerI(float delay){
