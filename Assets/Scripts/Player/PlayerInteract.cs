@@ -48,6 +48,13 @@ public class PlayerInteract : MonoBehaviour
                 {
                     aud.PlayOneShot(doorLocked, 1);
                 } 
+                else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
+                {
+                    if (hit.transform.tag == "Apple" || hit.transform.tag == "Notes")
+                    {
+                        item.OnHandlePickupItem();
+                    }
+                }
             }
 
     
