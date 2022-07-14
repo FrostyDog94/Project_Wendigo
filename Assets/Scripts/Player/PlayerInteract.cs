@@ -14,6 +14,8 @@ public class PlayerInteract : MonoBehaviour
 
     public Light flashlight;
 
+    public GameObject inventory;
+
     public GameObject gameOverScreen;
 
     public bool inside;
@@ -48,6 +50,13 @@ public class PlayerInteract : MonoBehaviour
                 {
                     aud.PlayOneShot(doorLocked, 1);
                 } 
+                else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
+                {
+                    if (hit.transform.tag == "Apple" || hit.transform.tag == "Notes")
+                    {
+                        item.OnHandlePickupItem();
+                    }
+                }
             }
 
     
@@ -60,6 +69,11 @@ public class PlayerInteract : MonoBehaviour
         {
             flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);
             aud.PlayOneShot(lightSwitch, 1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventory.SetActive(!inventory.activeSelf);
         }
 
 
