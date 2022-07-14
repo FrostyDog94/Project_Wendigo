@@ -9,8 +9,7 @@ TagManager:
   - Wendigo
   - Interior
   - Bed
-  - Notes
-  - Apple
+  - InventoryItem
   layers:
   - Default
   - TransparentFX

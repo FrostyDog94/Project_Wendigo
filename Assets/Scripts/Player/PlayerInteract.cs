@@ -52,7 +52,7 @@ public class PlayerInteract : MonoBehaviour
                 } 
                 else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
                 {
-                    if (hit.transform.tag == "Apple" || hit.transform.tag == "Notes")
+                    if (hit.transform.tag == "InventoryItem")
                     {
                         item.OnHandlePickupItem();
                     }

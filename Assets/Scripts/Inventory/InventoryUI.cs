@@ -7,6 +7,7 @@ public class InventoryUI : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(false);
         InventorySystem.onInventoryChangedEvent += OnUpdateInventory;
     }
 
