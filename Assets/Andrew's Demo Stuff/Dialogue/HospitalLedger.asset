@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919744bf3d782314381a1c53d766311e, type: 3}
+  m_Name: HospitalLedger
+  m_EditorClassIdentifier: 
+  speaker: Ledger
+  lines:
+  - It's a record of everyone who was staying at the hospital.
+  - '101 - Empty
+
+    102 - Empty
+
+    103 - "John Doe"
+
+    104 - Billy McEvans'
+  - "105 - Empty\n106 - Jennifer Stanely \n107 - Empty\n108 - Claire Gregory \n"
+  - '109 - Vanessa Marshall
+
+    110  - Empty
+
+    111 - Empty
+
+    112 - Empty
+
+'

@@ -13,12 +13,17 @@ public class PlayerInteract : MonoBehaviour
     public AudioClip nightAmbiance;
 
     public Light flashlight;
+    public bool flashlightActive;
 
     public GameObject inventory;
 
     public GameObject gameOverScreen;
 
     public bool inside;
+
+    public GameObject map;
+
+    public GameObject openingText;
 
 
     private void Start()
@@ -50,6 +55,8 @@ public class PlayerInteract : MonoBehaviour
                 {
                     aud.PlayOneShot(doorLocked, 1);
                 } 
+
+                //Inventory Pickup
                 else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
                 {
                     if (hit.transform.tag == "InventoryItem")
@@ -71,9 +78,31 @@ public class PlayerInteract : MonoBehaviour
             aud.PlayOneShot(lightSwitch, 1);
         }
 
+        if (flashlight.gameObject.activeSelf)
+        {
+            flashlightActive = true;
+        } else
+        {
+            flashlightActive = false;
+        }
+
+        //Inventory
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventory.SetActive(!inventory.activeSelf);
+        }
+
+        //Map
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            map.gameObject.SetActive(!map.gameObject.activeSelf);
+        }
+
+        //Opening Text
+
+        if (Input.GetKeyDown(KeyCode.Return) && openingText.activeSelf)
+        {
+            openingText.SetActive(false);
         }
 
 

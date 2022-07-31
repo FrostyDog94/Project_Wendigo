@@ -6,7 +6,7 @@ using SUPERCharacter;
 public class DialogueTrigger : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    private Dialogue _dialogue;
+    public Dialogue _dialogue;
 
     public bool Interact() {
         if (!DialogueManager.Instance.inDialogue) {

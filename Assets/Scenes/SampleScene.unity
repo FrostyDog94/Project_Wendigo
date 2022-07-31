@@ -12896,7 +12896,7 @@ MonoBehaviour:
   cam: {fileID: 1746540276}
   doorOpen: {fileID: 8300000, guid: be748be47473f8b4d851865034e5d3fb, type: 3}
   doorLocked: {fileID: 8300000, guid: 3c9fa699ed9f411419781881f3ec45bc, type: 3}
-  lightSwitch: {fileID: 0}
+  lightSwitch: {fileID: 8300000, guid: 9a1b1c2cfd183ae409fe1220db91521f, type: 3}
   nightAmbiance: {fileID: 0}
   flashlight: {fileID: 224061119}
   inventory: {fileID: 485820618}
@@ -25178,7 +25178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391145, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: interactKey_L
-      value: 101
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391145, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: interactRange

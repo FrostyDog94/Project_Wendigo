@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919744bf3d782314381a1c53d766311e, type: 3}
+  m_Name: HotelLedger
+  m_EditorClassIdentifier: 
+  speaker: Hotel Ledger
+  lines:
+  - It's a record of everyone who was staying at the hotel.
+  - '"101 - Nancy and Fred Darling
+
+    102 - Empty
+
+    103 - Empty
+
+    104 - Ron
+    Haverford"'
+  - '"105 - Stella Fontaine
+
+    106 - Michael and Tracy Galloway
+
+    107 - Empty
+
+    108
+    - Empty"'
+  - '"109 - Empty
+
+    110 - PRIVATE - NO GUESTS ALLOWED
+
+    111 - Empty
+
+    112
+    - Bill Duffy"'
+  - '"113 - Dale Strickland
+
+    114 - Empty"'

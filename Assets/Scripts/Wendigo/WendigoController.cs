@@ -18,6 +18,8 @@ public class WendigoController : MonoBehaviour
 
     Vector3 destination;
 
+    public PlayerInteract playerInteract;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class WendigoController : MonoBehaviour
         }
 
 
-        if (fov.canSeePlayer)
+        if (fov.canSeePlayer && playerInteract.flashlightActive)
         {
             playerSpotted = true;
         }

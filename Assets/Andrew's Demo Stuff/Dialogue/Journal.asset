@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919744bf3d782314381a1c53d766311e, type: 3}
+  m_Name: Journal
+  m_EditorClassIdentifier: 
+  speaker: Vincenzo's Journal
+  lines:
+  - This is Vincent Vincenzo's private journal.
+  - '"9/17
+
+
+    It''s all coming together! I''ve finally convinced the investors
+    and the Vincenzo Resort is becoming a reality! All I need to do now buy the land."'
+  - '"9/29
+
+
+    Convincing the people of this crappy little town to sell to me is
+    proving to be more difficult than I thought. Who''d have though people would
+    beso attached."'
+  - '"10/10
+
+
+    I spoke in front of the whole congregation at church this week.
+    I tried to explain to explain why selling to me was better for everyone!"'
+  - '"The basically ran me out of there like I was some kind of monster. Idiots.
+    To my surprise, Father Gregory found me afterwards and told me he had a proposition."'
+  - '"10/12
+
+
+    It''s all set! I struck a deal with the priest and soon there won''t
+    be anyone left to stand in my way."'
+  - '"I was skeptical at first, but when the Father opened that secret passage by
+    clicking the button under the altar, I was intrigued."'
+  - '"Underneath the church he showed me something incredible. A demon or monster
+    or something... I don''t know. "'
+  - '"Father Gregory has promised to use the beast to scare everyone out of town
+    in exchange for a handsome sum. It better work."'
