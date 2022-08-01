@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919744bf3d782314381a1c53d766311e, type: 3}
-  m_Name: Paper
+  m_Name: Plan2
   m_EditorClassIdentifier: 
-  speaker: Bills
+  speaker: Secret Plan
   lines:
-  - These are bills. And they're all past due.
-  - '"Eden Memorial Hospital:
-
-    Treatment: $75,000"'
-  - '"Mortgage
-
-    Claire''s Bar: $50,000"'
-  - They're all for someone named 'Claire Gregory'.
+  - A plan to trigger a volcanic eruption.
+  - This guy is out of his mind!

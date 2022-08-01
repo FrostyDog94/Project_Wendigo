@@ -46,7 +46,7 @@ Light:
   m_Color: {r: 0.9716981, g: 0.9179249, b: 0.62793696, a: 1}
   m_Intensity: 1.3
   m_Range: 25
-  m_SpotAngle: 45
+  m_SpotAngle: 55
   m_InnerSpotAngle: 4
   m_CookieSize: 10
   m_Shadows:
@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 6817638361354391145}
   - component: {fileID: 6817638361354391142}
   - component: {fileID: 454881415}
-  - component: {fileID: 454881416}
   - component: {fileID: 454881417}
   - component: {fileID: 454881418}
   m_Layer: 6
@@ -394,6 +393,7 @@ MonoBehaviour:
   - profileTriggerType: 0
     _Materials:
     - {fileID: 2100000, guid: d820cedbee440fd42bad589aa24fcc2b, type: 2}
+    - {fileID: 2100000, guid: 3219c2d654bb1a44abb299dc2e89a826, type: 2}
     _physicMaterials: []
     _Layers: []
     footstepClips:
@@ -401,16 +401,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
     - {fileID: 8300000, guid: b129e694a0fa16f498b497481befe169, type: 3}
     - {fileID: 8300000, guid: a3eb761c67da86e4d95a714d5040e215, type: 3}
-  - profileTriggerType: 0
+  - profileTriggerType: 1
     _Materials:
-    - {fileID: 2100000, guid: 0c7a55431be98694ca9b7852755cf931, type: 2}
+    - {fileID: 0}
     _physicMaterials: []
-    _Layers: []
+    _Layers:
+    - {fileID: 8574412962073106934, guid: 20344728ea90a6f408f8fefa7b2641aa, type: 2}
     footstepClips:
-    - {fileID: 8300000, guid: 49a4a47af61a25b4fb37c589359ef09c, type: 3}
-    - {fileID: 8300000, guid: a3eb761c67da86e4d95a714d5040e215, type: 3}
-    - {fileID: 8300000, guid: 965861ab37dcd9549912eca505055b63, type: 3}
-    - {fileID: 8300000, guid: e2f81d653f70254468486696deb5e2d7, type: 3}
+    - {fileID: 8300000, guid: e70c5fa5ed6b97f41aa555d63ca56d42, type: 3}
+    - {fileID: 8300000, guid: d3947cf2c6783a447bd0dae10cd8bb21, type: 3}
+    - {fileID: 8300000, guid: 41b975e693999f942b5755a8f054c4ce, type: 3}
+    - {fileID: 8300000, guid: 818617f6fe74a6345a5babff80a756e2, type: 3}
   enableHeadbob: 1
   headbobSpeed: 3
   headbobPower: 2.52
@@ -595,22 +596,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
---- !u!114 &454881416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6817638361354391147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6ae398d96ba9746bfcd6bed5903238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeController: {fileID: 0}
-  cam: {fileID: 6817638360860843947}
-  interactDistance: 5
-  sleepMultiplier: 20
 --- !u!114 &454881417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,9 +615,12 @@ MonoBehaviour:
   lightSwitch: {fileID: 8300000, guid: 9a1b1c2cfd183ae409fe1220db91521f, type: 3}
   nightAmbiance: {fileID: 0}
   flashlight: {fileID: 1040464589}
+  flashlightActive: 0
   inventory: {fileID: 0}
   gameOverScreen: {fileID: 0}
   inside: 0
+  map: {fileID: 0}
+  openingText: {fileID: 0}
 --- !u!114 &454881418
 MonoBehaviour:
   m_ObjectHideFlags: 0
