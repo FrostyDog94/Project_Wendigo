@@ -38,11 +38,6 @@ public class WendigoController : MonoBehaviour
     {
         agent.SetDestination(destination);
 
-       /* if (Vector3.Distance(this.transform.position, fov.player.transform.position) <= 5)
-        {
-            ChasePlayer();
-        }*/
-
         if (agent.transform.position == agent.destination)
         {
             n = Random.Range(0, waypoints.Length - 1);

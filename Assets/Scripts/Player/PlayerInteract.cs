@@ -29,46 +29,17 @@ public class PlayerInteract : MonoBehaviour
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-
+        Flashlight();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
 
-        //Open doors
-        if (hit.transform != null)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (hit.transform.tag == "Door")
-                {
-                    {
-                        transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
-                        transform.rotation = hit.transform.GetComponent<DoorController>().doorPosition.rotation;
-                        aud.PlayOneShot(doorOpen, 1);
-                    }
-                }
-                else if (hit.transform.tag == "Locked Door")
-                {
-                    aud.PlayOneShot(doorLocked, 1);
-                } 
-
-                //Inventory Pickup
-                else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
-                {
-                    if (hit.transform.tag == "InventoryItem")
-                    {
-                        item.OnHandlePickupItem();
-                    }
-                }
-            }
-
-    
+            Interact();
         }
-
 
 
         //Flashlight
@@ -76,15 +47,10 @@ public class PlayerInteract : MonoBehaviour
         {
             flashlight.gameObject.SetActive(!flashlight.gameObject.activeSelf);
             aud.PlayOneShot(lightSwitch, 1);
+            Flashlight();
         }
 
-        if (flashlight.gameObject.activeSelf)
-        {
-            flashlightActive = true;
-        } else
-        {
-            flashlightActive = false;
-        }
+       
 
         //Inventory
         if (Input.GetKeyDown(KeyCode.I))
@@ -134,6 +100,54 @@ public class PlayerInteract : MonoBehaviour
         if (other.transform.tag == "Interior")
         {
             inside = false;
+        }
+    }
+
+    void Flashlight()
+    {
+        if (flashlight.gameObject.activeSelf)
+        {
+            flashlightActive = true;
+        }
+        else
+        {
+            flashlightActive = false;
+        }
+    }
+
+    void Interact()
+    {
+        RaycastHit hit;
+        Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
+
+        //Open doors
+        if (hit.transform != null)
+        {
+           
+                if (hit.transform.tag == "Door")
+                {
+                    {
+                        transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
+                        transform.rotation = hit.transform.GetComponent<DoorController>().doorPosition.rotation;
+                        aud.PlayOneShot(doorOpen, 1);
+                    }
+                }
+                else if (hit.transform.tag == "Locked Door")
+                {
+                    aud.PlayOneShot(doorLocked, 1);
+                }
+
+                //Inventory Pickup
+                else if (hit.transform.TryGetComponent<ItemObject>(out ItemObject item))
+                {
+                    if (hit.transform.tag == "InventoryItem")
+                    {
+                        item.OnHandlePickupItem();
+                    }
+                }
+            
+
+
         }
     }
 

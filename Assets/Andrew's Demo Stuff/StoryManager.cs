@@ -46,20 +46,17 @@ public class StoryManager : MonoBehaviour
         altarPos = altar1.transform.position;
         altarRot = altar1.transform.rotation;
 
+        CheckInventory();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-        //Katie 
-        if (inventorySystem.Get(book) != null)
+    public void CheckInventory()
+    {
+        //Secret Passage
+        if (inventorySystem.Get(journal) != null && GameObject.Find("Altar2(Clone)") == null)
         {
-            katieTrigger._dialogue = katieDialogue2; //Goto Hospital
-        }
-        else
-        {
-            katieTrigger._dialogue = katieDialogue1; //Initial Greeting
+            Instantiate(altar2, altarPos, altarRot);
+            Destroy(altar1);
         }
 
         //Hotel Door
@@ -72,16 +69,20 @@ public class StoryManager : MonoBehaviour
             door.tag = "Locked Door";
         }
 
-        //Secret Passage
-        if (inventorySystem.Get(journal) != null && GameObject.Find("Altar2(Clone)") == null)
+        //Katie 
+        if (inventorySystem.Get(book) != null)
         {
-            Instantiate(altar2, altarPos, altarRot);
-            Destroy(altar1);
+            katieTrigger._dialogue = katieDialogue2; //Goto Hospital
         }
+        else
+        {
+            katieTrigger._dialogue = katieDialogue1; //Initial Greeting
+        }
+
+        //Altar
 
         if (inventorySystem.Get(journal) != null && inventorySystem.Get(altar) != null)
         {
-            Debug.Log("success");
             secretPassage.GetComponent<Animator>().SetBool("isOpen", true);
         }
 
@@ -90,7 +91,6 @@ public class StoryManager : MonoBehaviour
         {
             endingScreen.GetComponent<Animator>().SetBool("isEnding", true);
         }
-
     }
 
 }

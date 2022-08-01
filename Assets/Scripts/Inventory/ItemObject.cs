@@ -5,6 +5,12 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     public InventoryItemData referenceItem;
+    public StoryManager storyManager;
+
+    private void Start()
+    {
+        storyManager = GameObject.Find("Story Manager").GetComponent<StoryManager>();
+    }
 
     public void OnHandlePickupItem()
     {
@@ -14,5 +20,7 @@ public class ItemObject : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        storyManager.CheckInventory();
     }
 }
