@@ -14,7 +14,7 @@ public class WendigoController : MonoBehaviour
     public float patrolSpeed;
     AudioSource aud;
     
-    bool playerSpotted;
+    public bool playerSpotted;
 
     Vector3 destination;
 
@@ -49,7 +49,7 @@ public class WendigoController : MonoBehaviour
             playerSpotted = true;
         }
 
-        if (playerSpotted)
+        if (playerSpotted && playerInteract.inside == false)
         {
             ChasePlayer();
         }

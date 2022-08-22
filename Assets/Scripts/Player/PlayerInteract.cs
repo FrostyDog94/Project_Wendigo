@@ -23,7 +23,11 @@ public class PlayerInteract : MonoBehaviour
 
     public GameObject map;
 
-    public GameObject openingText;
+    public Animator anim;
+
+    public WendigoController wendigoController;
+
+   
 
 
     private void Start()
@@ -64,11 +68,9 @@ public class PlayerInteract : MonoBehaviour
             map.gameObject.SetActive(!map.gameObject.activeSelf);
         }
 
-        //Opening Text
-
-        if (Input.GetKeyDown(KeyCode.Return) && openingText.activeSelf)
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            openingText.SetActive(false);
+            anim.SetBool("isEnd", true);
         }
 
 
@@ -77,7 +79,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Wendigo")
+        if(collision.transform.tag == "Wendigo" && flashlightActive)
         {
             gameOverScreen.SetActive(true);
             Debug.Log("Success");

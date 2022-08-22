@@ -15,5 +15,13 @@ MonoBehaviour:
   speaker: Key
   lines:
   - It's the key to that strange book I found.
-  - Finally! Maybe it can tell me how to stop all th...
-  - Wait... what is that?
+  - Oh my god...
+  - This book describes an ancient ritual used to summon a demon of great power.
+  - Over the centuries, this demon has been used to do the bidding of whoever possessed
+    the book. It would kill anyone who stood in the way of it's master's goals.
+  - But if the summoner wasn't strong willed enough, the demon would break free and
+    kill until it was stopped.
+  - The book describes a ritual that can be used to send the demon back to Hell.
+    It requires the blood of an innocent victim and a container to hold it.
+  - I'll need to find a bottle and fill it with the blood of an innocent victim.
+    Then I can bring it back here to perform the ritual.
