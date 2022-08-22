@@ -68,10 +68,7 @@ public class PlayerInteract : MonoBehaviour
             map.gameObject.SetActive(!map.gameObject.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            anim.SetBool("isEnd", true);
-        }
+
 
 
     }
