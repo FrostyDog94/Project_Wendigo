@@ -15,21 +15,43 @@ public class FieldOfView : MonoBehaviour
 
     public bool canSeePlayer;
 
+    public PlayerInteract playerInteract;
+    float time = 0.2f;
+    float timer;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FOVRoutine());
+        //StartCoroutine(FOVRoutine());
+        timer = time;
     }
 
-    public IEnumerator FOVRoutine()
+   /* public IEnumerator FOVRoutine()
     {
         float delay = 0.2f;
         WaitForSeconds wait = new WaitForSeconds(delay);
 
         while (true)
         {
-            yield return wait;
+            if (playerInteract.inside)
+            {
+                yield return wait;
+                FieldOfViewCheck();
+            }
+        }
+    }
+   */
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        
+        if (timer <= 0)
+        {
+            
             FieldOfViewCheck();
+            timer = time;
+            
         }
     }
 
@@ -71,8 +93,10 @@ public class FieldOfView : MonoBehaviour
         
     }
 
-    public void startFOVRoutine()
+   /* public void startFOVRoutine()
     {
+
         StartCoroutine(FOVRoutine());
     }
+   */
 }

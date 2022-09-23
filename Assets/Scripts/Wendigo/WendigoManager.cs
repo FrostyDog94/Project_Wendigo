@@ -10,15 +10,5 @@ public class WendigoManager : MonoBehaviour
 
 
 
-    void Update()
-    {
-        if (timeController.currentTime.TimeOfDay > timeController.sunriseTime && timeController.currentTime.TimeOfDay < timeController.sunsetTime)
-        {
-            wendigo.SetActive(false);
-        } else
-        {
-            wendigo.SetActive(true);
-            fov.startFOVRoutine();
-        }
-    }
+
 }
