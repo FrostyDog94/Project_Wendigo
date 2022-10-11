@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919744bf3d782314381a1c53d766311e, type: 3}
+  m_Name: Claire's Computer
+  m_EditorClassIdentifier: 
+  speaker: Claire's Computer
+  lines:
+  - There's an email open.
+  - '"Hey Mom,
+
+
+    I got everything figured out! You don''t have to worry about
+    anything anymore! We''ll be able to pay the mortgage on the bar and still be
+    able to afford your treatment."'
+  - '"I made a deal with Vincent Vincenzo, the owner of Hotel Vincenzo. I just need
+    to help him out with some business and he promised to pay more than enough."'
+  - '"Everything is finally going to be ok. You don''t have to worry anymore."'
+  - '"P.S. Did I leave my jacket at the bar?"'
