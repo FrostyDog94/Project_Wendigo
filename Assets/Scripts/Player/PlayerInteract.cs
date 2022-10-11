@@ -71,7 +71,9 @@ public class PlayerInteract : MonoBehaviour
         if(collision.transform.tag == "Wendigo")
         {
             gameOverScreen.SetActive(true);
-            Debug.Log("Success");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
         }
 
 
