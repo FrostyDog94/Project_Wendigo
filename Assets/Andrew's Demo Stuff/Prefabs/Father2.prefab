@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 1936436928396076533}
   - component: {fileID: 1936436928396076490}
   - component: {fileID: 1936436928396076535}
-  - component: {fileID: 2595878246517175413}
   m_Layer: 0
   m_Name: Blood (1)
-  m_TagString: InventoryItem
+  m_TagString: bad blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,20 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue: {fileID: 11400000, guid: 1a262968c7567ac4cb3b5dd3ae404011, type: 2}
---- !u!114 &2595878246517175413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936436928396076488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55b599e9e320c3b40904eddb5d050f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceItem: {fileID: 11400000, guid: 8c8ae9c51826b2840bde7dc04a790b3d, type: 2}
-  storyManager: {fileID: 0}
 --- !u!1 &3963259769853844097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,7 +2480,7 @@ GameObject:
   - component: {fileID: 3963259769844492579}
   m_Layer: 0
   m_Name: Father2
-  m_TagString: InventoryItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

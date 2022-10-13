@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 1983217640772300085}
   - component: {fileID: 1983217640772300074}
   - component: {fileID: 1983217640772300075}
-  - component: {fileID: 715705425615185735}
   - component: {fileID: 3197922911090394144}
   m_Layer: 0
   m_Name: Ritual3
-  m_TagString: InventoryItem
+  m_TagString: bad ritual
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,20 +99,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &715705425615185735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983217640772300072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55b599e9e320c3b40904eddb5d050f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceItem: {fileID: 11400000, guid: 0f47e0beaf23fc34f9ec95d208b3e0db, type: 2}
-  storyManager: {fileID: 0}
 --- !u!114 &3197922911090394144
 MonoBehaviour:
   m_ObjectHideFlags: 0

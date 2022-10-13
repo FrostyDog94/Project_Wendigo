@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5508867399364970591}
   m_Layer: 0
   m_Name: Bed2
-  m_TagString: InventoryItem
+  m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

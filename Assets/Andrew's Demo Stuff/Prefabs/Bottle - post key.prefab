@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 6544725946279439314}
   - component: {fileID: 7234846852219251478}
   - component: {fileID: 1927159840150838593}
-  - component: {fileID: 6852318968766200354}
   m_Layer: 0
   m_Name: Bottle - post key
-  m_TagString: InventoryItem
+  m_TagString: bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,17 +111,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue: {fileID: 11400000, guid: 1871acf3f8b70654c906add772f1d660, type: 2}
---- !u!114 &6852318968766200354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4743264448941853191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55b599e9e320c3b40904eddb5d050f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceItem: {fileID: 11400000, guid: 9aa7ec2ef0874704b856d038095bec35, type: 2}
-  storyManager: {fileID: 0}

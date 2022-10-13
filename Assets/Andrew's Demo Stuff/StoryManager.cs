@@ -6,16 +6,16 @@ public class StoryManager : MonoBehaviour
 {
     public InventorySystem inventorySystem;
 
-    public InventoryItemData book;
-    public InventoryItemData hotelKey;
-    public InventoryItemData journal;
-    public InventoryItemData altar;
-    public InventoryItemData bookKey;
-    public InventoryItemData bottle;
-    public InventoryItemData blood;
-    public InventoryItemData ritual;
-    public InventoryItemData badBlood;
-    public InventoryItemData badRitual;
+    public bool book;
+    public bool hotelKey;
+    public bool journal;
+    public bool altar;
+    public bool bookKey;
+    public bool bottle;
+    public bool blood;
+    public bool ritual;
+    public bool badBlood;
+    public bool badRitual;
 
     public GameObject secretPassage;
 
@@ -99,24 +99,21 @@ public class StoryManager : MonoBehaviour
     public void CheckInventory()
     {
         //Secret Passage
-        if (inventorySystem.Get(journal) != null && GameObject.Find("Altar2(Clone)") == null)
+        if (journal && GameObject.Find("Altar2(Clone)") == null)
         {
             Instantiate(altar2, altarPos, altarRot);
             Destroy(altar1);
         }
 
         //Hotel Door
-        if (inventorySystem.Get(hotelKey) != null)
+        if (hotelKey)
         {
             door.tag = "Door";
-        }
-        else
-        {
-            door.tag = "Locked Door";
+            
         }
 
         //Katie 
-        if (inventorySystem.Get(book) != null)
+        if (book)
         {
             katieTrigger._dialogue = katieDialogue2; //Goto Hospital
         }
@@ -127,19 +124,19 @@ public class StoryManager : MonoBehaviour
 
         //Altar
 
-        if (inventorySystem.Get(journal) != null && inventorySystem.Get(altar) != null)
+        if (journal && altar)
         {
             secretPassage.GetComponent<Animator>().SetBool("isOpen", true);
         }
 
         //Ritual
-        if (inventorySystem.Get(bookKey) != null && inventorySystem.Get(bottle) == null)
+        if (bookKey && bottle == false && GameObject.Find("Bottle - post key(Clone)") == null)
         {
             Instantiate(bottle2, bottlePos, bottleRot);
             Destroy(bottle1);
         }
 
-        if (inventorySystem.Get(bottle) != null && GameObject.Find("Bed2(Clone)") == null && GameObject.Find("Father2(Clone)") == null)
+        if (bottle && GameObject.Find("Bed2(Clone)") == null && GameObject.Find("Father2(Clone)") == null)
         {
             Instantiate(bed2, bedPos, bedRot);
             Destroy(bed1);
@@ -148,25 +145,26 @@ public class StoryManager : MonoBehaviour
             Destroy(father1);
         }
 
-        if (inventorySystem.Get(blood) != null && inventorySystem.Get(badBlood) == null && GameObject.Find("Ritual2(Clone)") == null)
+        if (blood && badBlood == false && GameObject.Find("Ritual2(Clone)") == null)
         {
             Instantiate(ritual2, ritualPos, ritualRot);
             Destroy(ritual1);
         }
 
-        if (inventorySystem.Get(ritual) != null)
+        if (ritual)
         {
             anim.SetBool("isEnd", true);
         }
 
         //Bad Ending
-        if (inventorySystem.Get(badBlood) != null && inventorySystem.Get(blood) == null && GameObject.Find("Ritual3(Clone)") == null)
+        if (badBlood && blood == false && GameObject.Find("Ritual3(Clone)") == null)
         {
             Instantiate(ritual3, ritualPos, ritualRot);
             Destroy(ritual1);
+            
         }
 
-        if (inventorySystem.Get(badRitual) != null)
+        if (badRitual)
         {
             endWendigo.SetActive(true);
         }
