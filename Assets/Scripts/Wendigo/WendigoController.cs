@@ -55,8 +55,11 @@ public class WendigoController : MonoBehaviour
         }
         else
         {
+            playerSpotted = false;
             Patrol();
         }
+
+
 
 
     }
