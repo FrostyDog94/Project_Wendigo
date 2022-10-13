@@ -59,6 +59,12 @@ public class WendigoController : MonoBehaviour
             Patrol();
         }
 
+        if (playerSpotted && playerInteract.flashlightActive == false)
+        {
+            playerSpotted = false;
+            Patrol();
+        }
+
 
 
 
