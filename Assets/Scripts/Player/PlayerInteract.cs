@@ -83,7 +83,7 @@ public class PlayerInteract : MonoBehaviour
             gameOverScreen.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-
+            wendigoController.enabled = false;
         }
 
 

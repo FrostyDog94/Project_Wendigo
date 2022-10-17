@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class WendigoController : MonoBehaviour
 {
+    enum State { Chasing, Patrolling };
+    State currentState;
     NavMeshAgent agent;
     public Transform[] waypoints;
     int n;
@@ -12,9 +14,12 @@ public class WendigoController : MonoBehaviour
     FieldOfView fov;
     public float chaseSpeed;
     public float patrolSpeed;
-    AudioSource aud;
-    
-    public bool playerSpotted;
+    private bool isChasing;
+
+    AudioSource[] audSrcs;
+    AudioSource footstepsAudSrc;
+    AudioSource otherAudSrc;
+    public AudioClip alertAudio;
 
     Vector3 destination;
 
@@ -26,10 +31,12 @@ public class WendigoController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         fov = GetComponent<FieldOfView>();
-        aud = GetComponent<AudioSource>();
-        aud.pitch = 0.75f;
+        audSrcs = GetComponents<AudioSource>();
+        footstepsAudSrc = audSrcs[0];
+        otherAudSrc = audSrcs[1];
+        footstepsAudSrc.pitch = 0.75f;
         n = Random.Range(0, waypoints.Length - 1);
-        
+        currentState = State.Patrolling;
         
     }
 
@@ -44,30 +51,21 @@ public class WendigoController : MonoBehaviour
         }
 
 
-        if (fov.canSeePlayer && playerInteract.flashlightActive)
+        if (fov.canSeePlayer && playerInteract.flashlightActive && playerInteract.inside == false)
         {
-            playerSpotted = true;
-        }
-
-        if (playerSpotted && playerInteract.inside == false)
-        {
+            if (currentState == State.Patrolling) 
+            {
+                otherAudSrc.pitch = 1.5f;
+                otherAudSrc.PlayOneShot(alertAudio, 1);
+            }
+            currentState = State.Chasing;
             ChasePlayer();
         }
         else
         {
-            playerSpotted = false;
+            currentState = State.Patrolling;
             Patrol();
         }
-
-        if (playerSpotted && playerInteract.flashlightActive == false)
-        {
-            playerSpotted = false;
-            Patrol();
-        }
-
-
-
-
     }
 
     void ChasePlayer()
@@ -75,8 +73,7 @@ public class WendigoController : MonoBehaviour
         destination = fov.player.transform.position;
         anim.SetBool("isRunning", true);
         agent.speed = chaseSpeed;
-        aud.pitch = 3;
-        
+        footstepsAudSrc.pitch = 3;
     }
 
     void Patrol()
@@ -84,7 +81,7 @@ public class WendigoController : MonoBehaviour
         destination = waypoints[n].position;
         anim.SetBool("isWalking", true);
         agent.speed = patrolSpeed;
-        aud.pitch = 0.75f;
+        footstepsAudSrc.pitch = 0.75f;
     }
 
 
