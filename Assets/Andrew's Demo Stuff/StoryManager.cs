@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
+    public static StoryManager Instance { get; private set; }
     public InventorySystem inventorySystem;
 
     public bool book;
@@ -68,7 +69,11 @@ public class StoryManager : MonoBehaviour
 
 
 
-
+    void Awake() 
+    {
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
+    }
 
 
 

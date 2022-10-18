@@ -27,8 +27,6 @@ public class PlayerInteract : MonoBehaviour
 
     public WendigoController wendigoController;
 
-    public StoryManager storyManager;
-
    
 
 
@@ -120,7 +118,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Interact()
     {
-        storyManager.CheckInventory();
+        StoryManager.Instance.CheckInventory();
 
         RaycastHit hit;
         Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
@@ -147,46 +145,46 @@ public class PlayerInteract : MonoBehaviour
                 //Inventory Pickup
                 else if (hit.transform.tag == "book")
                 {
-                    storyManager.book = true;
+                    StoryManager.Instance.book = true;
                     Destroy(hit.transform.gameObject);
                 }
                 else if (hit.transform.tag == "hotel key")
                 {
-                    storyManager.hotelKey = true;
+                    StoryManager.Instance.hotelKey = true;
                 }
                 else if (hit.transform.tag == "journal")
                 {
-                    storyManager.journal = true;
+                    StoryManager.Instance.journal = true;
                 }
                 else if (hit.transform.tag == "altar")
                 {
-                    storyManager.altar = true;
+                    StoryManager.Instance.altar = true;
                 }
                 else if (hit.transform.tag == "book key")
                 {
-                    storyManager.bookKey = true;
+                    StoryManager.Instance.bookKey = true;
                     Destroy(hit.transform.gameObject);
                 }
                 else if (hit.transform.tag == "bottle")
                 {
-                    storyManager.bottle = true;
+                    StoryManager.Instance.bottle = true;
                     Destroy(hit.transform.gameObject);
                 }
                 else if (hit.transform.tag == "blood")
                 {
-                    storyManager.blood = true;
+                    StoryManager.Instance.blood = true;
                 }
                 else if (hit.transform.tag == "ritual")
                 {
-                    storyManager.ritual = true;
+                    StoryManager.Instance.ritual = true;
                 }
                 else if (hit.transform.tag == "bad blood")
                 {
-                    storyManager.badBlood = true;
+                    StoryManager.Instance.badBlood = true;
                 }
                 else if (hit.transform.tag == "bad ritual")
                 {
-                    storyManager.badRitual = true;
+                    StoryManager.Instance.badRitual = true;
                 }
             
 
