@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using SUPERCharacter;
 
-public class DialogueTrigger : MonoBehaviour, IInteractable
+public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     public Dialogue _dialogue;
 
-    public bool Interact() {
+    public void TriggerDialogue() {
         if (!DialogueManager.Instance.inDialogue) {
             DialogueManager.Instance.StartDialogue(_dialogue);
-            return true;
         }
-        return false;
     }
 }

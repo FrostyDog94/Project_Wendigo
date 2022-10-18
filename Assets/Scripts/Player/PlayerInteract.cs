@@ -128,7 +128,9 @@ public class PlayerInteract : MonoBehaviour
         //Open doors
         if (hit.transform != null)
         {
-           
+                if (hit.transform.GetComponent<DialogueTrigger>()) {
+                    hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
+                }
                 if (hit.transform.tag == "Door")
                 {
                     {
