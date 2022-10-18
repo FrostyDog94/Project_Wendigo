@@ -5,32 +5,31 @@ using UnityEngine.AI;
 
 public class EndigoController : MonoBehaviour
 {
+    public GameObject player;
+    public LayerMask obstructionMask;
     NavMeshAgent agent;
-    public Transform[] waypoints;
-    int n;
     Animator anim;
-    FieldOfView fov;
     public float chaseSpeed;
-    public float patrolSpeed;
-    AudioSource aud;
-    
-    bool playerSpotted;
+    AudioSource[] audSrcs;
+    AudioSource footstepsAudSrc;
+    AudioSource otherAudSrc;
+    public AudioClip alertAudio;
+    bool playerHasSeenWendigo;
 
     Vector3 destination;
-
-    public PlayerInteract playerInteract;
+    float time = 0.2f;
+    float timer;
+    bool alertPlayed;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        fov = GetComponent<FieldOfView>();
-        aud = GetComponent<AudioSource>();
-        aud.pitch = 0.75f;
-        n = Random.Range(0, waypoints.Length - 1);
-        
-        
+        audSrcs = GetComponents<AudioSource>();
+        footstepsAudSrc = audSrcs[0];
+        otherAudSrc = audSrcs[1];
+        footstepsAudSrc.pitch = 0.75f;
     }
 
     // Update is called once per frame
@@ -38,44 +37,48 @@ public class EndigoController : MonoBehaviour
     {
         agent.SetDestination(destination);
 
-        if (agent.transform.position == agent.destination)
+        timer -= Time.deltaTime;
+        
+        if (timer <= 0)
         {
-            n = Random.Range(0, waypoints.Length - 1);
+            FOVCheck();
+            timer = time;
         }
 
-
-        if (fov.canSeePlayer)
-        {
-            playerSpotted = true;
-        }
-
-        if (playerSpotted)
+        if (playerHasSeenWendigo)
         {
             ChasePlayer();
         }
-        else
-        {
-            Patrol();
-        }
-
-
     }
 
     void ChasePlayer()
     {
-        destination = fov.player.transform.position;
-        anim.SetBool("isRunning", true);
-        agent.speed = chaseSpeed;
-        aud.pitch = 3;
-        
+        if(!alertPlayed) 
+        {
+            agent.enabled = true;
+            alertPlayed = true;
+            otherAudSrc.pitch = 1.5f;
+            otherAudSrc.PlayOneShot(alertAudio, 1);
+            anim.SetBool("isRunning", true);
+            agent.speed = chaseSpeed;
+            footstepsAudSrc.pitch = 3;
+        }
+        destination = player.transform.position;
     }
 
-    void Patrol()
+    private void FOVCheck()
     {
-        destination = waypoints[n].position;
-        anim.SetBool("isWalking", true);
-        agent.speed = patrolSpeed;
-        aud.pitch = 0.75f;
+        Vector3 directionToTarget = (transform.position - player.transform.position).normalized;
+
+        if(Vector3.Angle(player.transform.forward, directionToTarget) < 90)
+        {
+            float distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
+
+            if (!Physics.Raycast(player.transform.position, directionToTarget, distanceToTarget, obstructionMask))
+            {
+                playerHasSeenWendigo = true;
+            }
+        }
     }
 
 

@@ -79,6 +79,7 @@ public class PlayerInteract : MonoBehaviour
         if(collision.transform.tag == "Wendigo" && flashlightActive)
         {
             gameOverScreen.SetActive(true);
+            collision.transform.gameObject.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             wendigoController.enabled = false;
@@ -118,78 +119,74 @@ public class PlayerInteract : MonoBehaviour
 
     void Interact()
     {
-        StoryManager.Instance.CheckInventory();
-
         RaycastHit hit;
         Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactDistance);
 
         //Open doors
         if (hit.transform != null)
         {
-                if (hit.transform.GetComponent<DialogueTrigger>()) {
-                    hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
-                }
-                if (hit.transform.tag == "Door")
+            if (hit.transform.GetComponent<DialogueTrigger>()) {
+                hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
+            }
+            if (hit.transform.tag == "Door")
+            {
                 {
-                    {
-                        transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
-                        transform.rotation = hit.transform.GetComponent<DoorController>().doorPosition.rotation;
-                        aud.PlayOneShot(doorOpen, 1);
-                    }
+                    transform.position = hit.transform.GetComponent<DoorController>().doorPosition.position;
+                    transform.rotation = hit.transform.GetComponent<DoorController>().doorPosition.rotation;
+                    aud.PlayOneShot(doorOpen, 1);
                 }
-                else if (hit.transform.tag == "Locked Door")
-                {
-                    aud.PlayOneShot(doorLocked, 1);
-                }
+            }
+            else if (hit.transform.tag == "Locked Door")
+            {
+                aud.PlayOneShot(doorLocked, 1);
+            }
 
-                //Inventory Pickup
-                else if (hit.transform.tag == "book")
-                {
-                    StoryManager.Instance.book = true;
-                    Destroy(hit.transform.gameObject);
-                }
-                else if (hit.transform.tag == "hotel key")
-                {
-                    StoryManager.Instance.hotelKey = true;
-                }
-                else if (hit.transform.tag == "journal")
-                {
-                    StoryManager.Instance.journal = true;
-                }
-                else if (hit.transform.tag == "altar")
-                {
-                    StoryManager.Instance.altar = true;
-                }
-                else if (hit.transform.tag == "book key")
-                {
-                    StoryManager.Instance.bookKey = true;
-                    Destroy(hit.transform.gameObject);
-                }
-                else if (hit.transform.tag == "bottle")
-                {
-                    StoryManager.Instance.bottle = true;
-                    Destroy(hit.transform.gameObject);
-                }
-                else if (hit.transform.tag == "blood")
-                {
-                    StoryManager.Instance.blood = true;
-                }
-                else if (hit.transform.tag == "ritual")
-                {
-                    StoryManager.Instance.ritual = true;
-                }
-                else if (hit.transform.tag == "bad blood")
-                {
-                    StoryManager.Instance.badBlood = true;
-                }
-                else if (hit.transform.tag == "bad ritual")
-                {
-                    StoryManager.Instance.badRitual = true;
-                }
-            
-
-
+            //Inventory Pickup
+            else if (hit.transform.tag == "book")
+            {
+                StoryManager.Instance.book = true;
+                Destroy(hit.transform.gameObject);
+            }
+            else if (hit.transform.tag == "hotel key")
+            {
+                StoryManager.Instance.hotelKey = true;
+            }
+            else if (hit.transform.tag == "journal")
+            {
+                StoryManager.Instance.journal = true;
+            }
+            else if (hit.transform.tag == "altar")
+            {
+                StoryManager.Instance.altar = true;
+            }
+            else if (hit.transform.tag == "book key")
+            {
+                StoryManager.Instance.bookKey = true;
+                Destroy(hit.transform.gameObject);
+            }
+            else if (hit.transform.tag == "bottle")
+            {
+                StoryManager.Instance.bottle = true;
+                Destroy(hit.transform.gameObject);
+            }
+            else if (hit.transform.tag == "blood")
+            {
+                StoryManager.Instance.blood = true;
+            }
+            else if (hit.transform.tag == "ritual")
+            {
+                StoryManager.Instance.ritual = true;
+            }
+            else if (hit.transform.tag == "bad blood")
+            {
+                StoryManager.Instance.badBlood = true;
+            }
+            else if (hit.transform.tag == "bad ritual")
+            {
+                StoryManager.Instance.badRitual = true;
+            }
         }
+        StoryManager.Instance.CheckInventory();
     }
 
 }

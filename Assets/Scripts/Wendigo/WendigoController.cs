@@ -57,6 +57,9 @@ public class WendigoController : MonoBehaviour
             {
                 otherAudSrc.pitch = 1.5f;
                 otherAudSrc.PlayOneShot(alertAudio, 1);
+                anim.SetBool("isRunning", true);
+                agent.speed = chaseSpeed;
+                footstepsAudSrc.pitch = 3;
             }
             currentState = State.Chasing;
             ChasePlayer();
@@ -71,9 +74,6 @@ public class WendigoController : MonoBehaviour
     void ChasePlayer()
     {
         destination = fov.player.transform.position;
-        anim.SetBool("isRunning", true);
-        agent.speed = chaseSpeed;
-        footstepsAudSrc.pitch = 3;
     }
 
     void Patrol()
