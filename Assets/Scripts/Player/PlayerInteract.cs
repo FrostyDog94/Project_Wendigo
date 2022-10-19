@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -26,19 +27,34 @@ public class PlayerInteract : MonoBehaviour
     public Animator anim;
 
     public WendigoController wendigoController;
+    bool journalOpen = false;
 
+    //Player is safe after exiting building
+    float safeTimer;
+    public float safeTime = 2;
+    public bool safe;
    
 
 
     private void Start()
     {
         aud = GetComponent<AudioSource>();
+        safeTimer = safeTime;
+        safe = false;
         Flashlight();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (safeTimer <= 0){
+            safe = false;
+        } else{
+            safeTimer -= Time.deltaTime;
+            safe = true;
+        }
+
+        
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -57,9 +73,20 @@ public class PlayerInteract : MonoBehaviour
        
 
         //Inventory
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            inventory.SetActive(!inventory.activeSelf);
+            if (journalOpen == false){
+                inventory.SetActive(true);
+                journalOpen = true;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            } else{
+                inventory.SetActive(false);
+                journalOpen = false;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            
         }
 
         //Map
@@ -67,6 +94,16 @@ public class PlayerInteract : MonoBehaviour
         {
             map.gameObject.SetActive(!map.gameObject.activeSelf);
         }
+
+        //Quit
+        /*
+         if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        */
 
 
 
@@ -83,6 +120,7 @@ public class PlayerInteract : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             wendigoController.enabled = false;
+            wendigoController.footstepsAudSrc.volume = 0;
         }
 
 
@@ -102,6 +140,7 @@ public class PlayerInteract : MonoBehaviour
         if (other.transform.tag == "Interior")
         {
             inside = false;
+            safeTimer = safeTime;
         }
     }
 
@@ -187,6 +226,13 @@ public class PlayerInteract : MonoBehaviour
             }
         }
         StoryManager.Instance.CheckInventory();
+        JournalManager.Instance.checkJournal();
+    }
+
+    public void MainMenu(){
+        SceneManager.LoadScene(0);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }

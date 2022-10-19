@@ -17,7 +17,7 @@ public class WendigoController : MonoBehaviour
     private bool isChasing;
 
     AudioSource[] audSrcs;
-    AudioSource footstepsAudSrc;
+    public AudioSource footstepsAudSrc;
     AudioSource otherAudSrc;
     public AudioClip alertAudio;
 
@@ -51,13 +51,12 @@ public class WendigoController : MonoBehaviour
         }
 
 
-        if (fov.canSeePlayer && playerInteract.flashlightActive && playerInteract.inside == false)
+        if (fov.canSeePlayer && playerInteract.flashlightActive && playerInteract.inside == false && playerInteract.safe == false)
         {
             if (currentState == State.Patrolling) 
             {
                 otherAudSrc.pitch = 1.5f;
                 otherAudSrc.PlayOneShot(alertAudio, 1);
-                anim.SetBool("isRunning", true);
                 agent.speed = chaseSpeed;
                 footstepsAudSrc.pitch = 3;
             }
@@ -74,12 +73,15 @@ public class WendigoController : MonoBehaviour
     void ChasePlayer()
     {
         destination = fov.player.transform.position;
+        anim.SetBool("isRunning", true);
+        anim.SetBool("isWalking", false);
     }
 
     void Patrol()
     {
         destination = waypoints[n].position;
         anim.SetBool("isWalking", true);
+        anim.SetBool("isRunning", false);
         agent.speed = patrolSpeed;
         footstepsAudSrc.pitch = 0.75f;
     }

@@ -15,6 +15,7 @@ public class EndigoController : MonoBehaviour
     AudioSource otherAudSrc;
     public AudioClip alertAudio;
     bool playerHasSeenWendigo;
+    public GameObject gameOverScreen;
 
     Vector3 destination;
     float time = 0.2f;
@@ -79,6 +80,20 @@ public class EndigoController : MonoBehaviour
                 playerHasSeenWendigo = true;
             }
         }
+    }
+
+ private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Player")
+        {
+            gameOverScreen.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            this.enabled = false;
+            footstepsAudSrc.volume = 0;
+        }
+
+
     }
 
 
