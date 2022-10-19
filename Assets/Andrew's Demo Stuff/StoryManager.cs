@@ -5,7 +5,6 @@ using UnityEngine;
 public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance { get; private set; }
-    public InventorySystem inventorySystem;
 
     public bool book;
     public bool hotelKey;
@@ -66,6 +65,8 @@ public class StoryManager : MonoBehaviour
     Quaternion bedRot;
 
     public GameObject endWendigo;
+
+    public GameObject goodEnding;
 
 
 
@@ -158,6 +159,7 @@ public class StoryManager : MonoBehaviour
 
         if (ritual)
         {
+            goodEnding.SetActive(true);
             anim.SetBool("isEnd", true);
         }
 
