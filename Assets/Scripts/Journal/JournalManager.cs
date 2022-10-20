@@ -7,6 +7,8 @@ public class JournalManager : MonoBehaviour
 {
     public static JournalManager Instance { get; private set; }
 
+    AudioSource openJournal;
+
     public List<string> journalEntries = new List<string>();
 
     public GameObject entry1;
@@ -31,10 +33,15 @@ public class JournalManager : MonoBehaviour
     public string bottleEntry;
     [TextArea(3,8)]
     public string bloodEntry;
+
+    
     
     void Awake(){
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
+
+        openJournal = GetComponent<AudioSource>();
+        openJournal.Play();
     }
 
     void Start(){
