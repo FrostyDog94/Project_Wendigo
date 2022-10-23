@@ -24,6 +24,7 @@ public class WendigoController : MonoBehaviour
     Vector3 destination;
 
     public PlayerInteract playerInteract;
+    public AmbiantSoundManager ambiantSoundManager;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class WendigoController : MonoBehaviour
         footstepsAudSrc.pitch = 0.75f;
         n = Random.Range(0, waypoints.Length - 1);
         currentState = State.Patrolling;
-        
+
     }
 
     // Update is called once per frame
@@ -53,12 +54,13 @@ public class WendigoController : MonoBehaviour
 
         if (fov.canSeePlayer && playerInteract.flashlightActive && playerInteract.inside == false && playerInteract.safe == false)
         {
-            if (currentState == State.Patrolling) 
+            if (currentState == State.Patrolling)
             {
                 otherAudSrc.pitch = 1.5f;
                 otherAudSrc.PlayOneShot(alertAudio, 1);
                 agent.speed = chaseSpeed;
                 footstepsAudSrc.pitch = 3;
+                ambiantSoundManager.stopMusic();
             }
             currentState = State.Chasing;
             ChasePlayer();
