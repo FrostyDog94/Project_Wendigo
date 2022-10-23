@@ -20,6 +20,7 @@ TagManager:
   - ritual
   - bad blood
   - bad ritual
+  - bills
   layers:
   - Default
   - TransparentFX

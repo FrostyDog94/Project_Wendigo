@@ -7,6 +7,8 @@ public class StoryManager : MonoBehaviour
     public static StoryManager Instance { get; private set; }
 
     public bool book;
+
+    public bool bills;
     public bool hotelKey;
     public bool journal;
     public bool altar;
@@ -70,7 +72,7 @@ public class StoryManager : MonoBehaviour
 
 
 
-    void Awake() 
+    void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
@@ -115,7 +117,7 @@ public class StoryManager : MonoBehaviour
         if (hotelKey)
         {
             door.tag = "Door";
-            
+
         }
 
         //Katie 
@@ -168,13 +170,15 @@ public class StoryManager : MonoBehaviour
         {
             Instantiate(ritual3, ritualPos, ritualRot);
             Destroy(ritual1);
-            
+
         }
 
         if (badRitual)
         {
             endWendigo.SetActive(true);
         }
+
+
 
 
 

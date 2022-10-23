@@ -232,6 +232,10 @@ public class PlayerInteract : MonoBehaviour
             {
                 StoryManager.Instance.badRitual = true;
             }
+            else if (hit.transform.tag == "bills")
+            {
+                StoryManager.Instance.bills = true;
+            }
         }
         StoryManager.Instance.CheckInventory();
         JournalManager.Instance.checkJournal();
