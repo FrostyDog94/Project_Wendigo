@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
@@ -9,27 +10,39 @@ public class SaveLoad : MonoBehaviour
     public PlayerInteract player;
     public WendigoController wendigo;
 
-    public bool continueGame;
+    public GameObject opening;
 
-    void Awake()
+
+    void Start()
     {
         storyManager = StoryManager.Instance;
-        if (continueGame)
+
+    }
+
+    void Update()
+    {
+        if (GameObject.Find("Player"))
         {
-            LoadGameData();
+            player = GameObject.Find("Player").GetComponent<PlayerInteract>();
+        }
+        if (GameObject.Find("Wendigo"))
+        {
+            wendigo = GameObject.Find("Wendigo").GetComponent<WendigoController>();
         }
     }
 
 
-
     public void SaveGameData()
     {
+        //SaveSystem.DeleteGameData();
         SaveSystem.SaveGameData(storyManager, player, wendigo);
+
     }
 
     public void LoadGameData()
     {
         SaveData data = SaveSystem.LoadGameData();
+
 
         storyManager.book = data.book;
         storyManager.bills = data.bills;
@@ -57,7 +70,13 @@ public class SaveLoad : MonoBehaviour
         wendigoPosition.z = data.wendigoPosition[2];
         wendigo.transform.position = wendigoPosition;
 
+        player.flashlight.gameObject.SetActive(true);
+        player.flashlightActive = true;
+
+        opening.SetActive(false);
 
     }
+
+
 
 }

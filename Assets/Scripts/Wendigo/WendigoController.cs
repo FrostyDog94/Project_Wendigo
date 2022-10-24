@@ -79,7 +79,7 @@ public class WendigoController : MonoBehaviour
         anim.SetBool("isWalking", false);
     }
 
-    void Patrol()
+    public void Patrol()
     {
         destination = waypoints[n].position;
         anim.SetBool("isWalking", true);
@@ -87,6 +87,8 @@ public class WendigoController : MonoBehaviour
         agent.speed = patrolSpeed;
         footstepsAudSrc.pitch = 0.75f;
     }
+
+
 
 
 

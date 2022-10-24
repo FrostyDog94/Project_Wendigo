@@ -76,7 +76,7 @@ public class PlayerInteract : MonoBehaviour
 
 
 
-        //Inventory
+        //Journal
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (journalOpen == false)
@@ -85,6 +85,7 @@ public class PlayerInteract : MonoBehaviour
                 journalOpen = true;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
+
             }
             else
             {
@@ -92,6 +93,7 @@ public class PlayerInteract : MonoBehaviour
                 journalOpen = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+
             }
 
         }

@@ -37,4 +37,26 @@ public static class SaveSystem
         }
     }
 
+    public static void DeleteGameData()
+    {
+        string path = Application.persistentDataPath + "/save.data";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
+
+    public static bool checkSave()
+    {
+        string path = Application.persistentDataPath + "/save.data";
+        if (File.Exists(path))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }

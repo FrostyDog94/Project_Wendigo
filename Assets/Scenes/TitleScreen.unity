@@ -7065,6 +7065,7 @@ GameObject:
   - component: {fileID: 1533088977}
   - component: {fileID: 1533088976}
   - component: {fileID: 1533088975}
+  - component: {fileID: 1533088979}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -7159,7 +7160,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1895840612}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ContinueGame
+        m_MethodName: continueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7207,6 +7208,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533088973}
   m_CullTransparentMesh: 1
+--- !u!114 &1533088979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533088973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd38e9f1fd88f0498e4bcf281478e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1533698176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8719,7 +8732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15381f9b57516c408762edbe7bb3d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continueButton: {fileID: 1533088973}
 --- !u!1001 &1922986729
 PrefabInstance:
   m_ObjectHideFlags: 0
