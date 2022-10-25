@@ -81,6 +81,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if (journalOpen == false)
             {
+                Time.timeScale = 0;
                 inventory.SetActive(true);
                 journalOpen = true;
                 Cursor.visible = true;
@@ -89,6 +90,7 @@ public class PlayerInteract : MonoBehaviour
             }
             else
             {
+                Time.timeScale = 1;
                 inventory.SetActive(false);
                 journalOpen = false;
                 Cursor.visible = false;
