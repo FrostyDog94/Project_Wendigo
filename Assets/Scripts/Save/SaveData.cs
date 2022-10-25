@@ -22,17 +22,17 @@ public class SaveData
 
     public SaveData(StoryManager storyManager, PlayerInteract player, WendigoController wendigo)
     {
-        book = storyManager.book;
-        bills = storyManager.bills;
-        hotelKey = storyManager.hotelKey;
-        journal = storyManager.journal;
-        altar = storyManager.altar;
-        bookKey = storyManager.bookKey;
-        bottle = storyManager.bottle;
-        blood = storyManager.blood;
-        ritual = storyManager.ritual;
-        badBlood = storyManager.badBlood;
-        badRitual = storyManager.badRitual;
+        book = storyManager.saveData.book;
+        bills = storyManager.saveData.bills;
+        hotelKey = storyManager.saveData.hotelKey;
+        journal = storyManager.saveData.journal;
+        altar = storyManager.saveData.altar;
+        bookKey = storyManager.saveData.bookKey;
+        bottle = storyManager.saveData.bottle;
+        blood = storyManager.saveData.blood;
+        ritual = storyManager.saveData.ritual;
+        badBlood = storyManager.saveData.badBlood;
+        badRitual = storyManager.saveData.badRitual;
 
         playerPosition = new float[3];
         playerPosition[0] = player.transform.position.x;

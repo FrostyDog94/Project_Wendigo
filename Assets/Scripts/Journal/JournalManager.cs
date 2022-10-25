@@ -57,37 +57,37 @@ public class JournalManager : MonoBehaviour
     public void checkJournal()
     {
 
-        if (StoryManager.Instance.book && !journalEntries.Contains(bookEntry))
+        if (StoryManager.Instance.saveData.book && !journalEntries.Contains(bookEntry))
         {
             journalEntries.Add(bookEntry);
         }
 
-        if (StoryManager.Instance.bills && !journalEntries.Contains(billsEntry))
+        if (StoryManager.Instance.saveData.bills && !journalEntries.Contains(billsEntry))
         {
             journalEntries.Add(billsEntry);
         }
 
-        if (StoryManager.Instance.hotelKey && !journalEntries.Contains(hotelKeyEntry))
+        if (StoryManager.Instance.saveData.hotelKey && !journalEntries.Contains(hotelKeyEntry))
         {
             journalEntries.Add(hotelKeyEntry);
         }
 
-        if (StoryManager.Instance.journal && !journalEntries.Contains(journalEntry))
+        if (StoryManager.Instance.saveData.journal && !journalEntries.Contains(journalEntry))
         {
             journalEntries.Add(journalEntry);
         }
 
-        if (StoryManager.Instance.bookKey && !journalEntries.Contains(bookKeyEntry))
+        if (StoryManager.Instance.saveData.bookKey && !journalEntries.Contains(bookKeyEntry))
         {
             journalEntries.Add(bookKeyEntry);
         }
 
-        if (StoryManager.Instance.bottle && !journalEntries.Contains(bottleEntry))
+        if (StoryManager.Instance.saveData.bottle && !journalEntries.Contains(bottleEntry))
         {
             journalEntries.Add(bottleEntry);
         }
 
-        if (StoryManager.Instance.badBlood || StoryManager.Instance.blood)
+        if (StoryManager.Instance.saveData.badBlood || StoryManager.Instance.saveData.blood)
         {
             if (!journalEntries.Contains(bloodEntry))
             {

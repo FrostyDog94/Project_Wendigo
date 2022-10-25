@@ -197,50 +197,50 @@ public class PlayerInteract : MonoBehaviour
             //Inventory Pickup
             else if (hit.transform.tag == "book")
             {
-                StoryManager.Instance.book = true;
+                StoryManager.Instance.saveData.book = true;
                 Destroy(hit.transform.gameObject);
             }
             else if (hit.transform.tag == "hotel key")
             {
-                StoryManager.Instance.hotelKey = true;
+                StoryManager.Instance.saveData.hotelKey = true;
             }
             else if (hit.transform.tag == "journal")
             {
-                StoryManager.Instance.journal = true;
+                StoryManager.Instance.saveData.journal = true;
             }
             else if (hit.transform.tag == "altar")
             {
-                StoryManager.Instance.altar = true;
+                StoryManager.Instance.saveData.altar = true;
             }
             else if (hit.transform.tag == "book key")
             {
-                StoryManager.Instance.bookKey = true;
+                StoryManager.Instance.saveData.bookKey = true;
                 Destroy(hit.transform.gameObject);
             }
             else if (hit.transform.tag == "bottle")
             {
-                StoryManager.Instance.bottle = true;
+                StoryManager.Instance.saveData.bottle = true;
                 Destroy(hit.transform.gameObject);
             }
             else if (hit.transform.tag == "blood")
             {
-                StoryManager.Instance.blood = true;
+                StoryManager.Instance.saveData.blood = true;
             }
             else if (hit.transform.tag == "ritual")
             {
-                StoryManager.Instance.ritual = true;
+                StoryManager.Instance.saveData.ritual = true;
             }
             else if (hit.transform.tag == "bad blood")
             {
-                StoryManager.Instance.badBlood = true;
+                StoryManager.Instance.saveData.badBlood = true;
             }
             else if (hit.transform.tag == "bad ritual")
             {
-                StoryManager.Instance.badRitual = true;
+                StoryManager.Instance.saveData.badRitual = true;
             }
             else if (hit.transform.tag == "bills")
             {
-                StoryManager.Instance.bills = true;
+                StoryManager.Instance.saveData.bills = true;
             }
         }
         StoryManager.Instance.CheckInventory();
