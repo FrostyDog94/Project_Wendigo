@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Opening : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Crosshair crosshair;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +12,7 @@ public class Opening : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             gameObject.SetActive(false);
+            crosshair.gameObject.SetActive(true);
         }
     }
 }

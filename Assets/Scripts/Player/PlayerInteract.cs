@@ -26,6 +26,8 @@ public class PlayerInteract : MonoBehaviour
 
     public Animator anim;
 
+    public Crosshair crosshair;
+
     public WendigoController wendigoController;
     bool journalOpen = false;
 
@@ -86,7 +88,7 @@ public class PlayerInteract : MonoBehaviour
                 journalOpen = true;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-
+                crosshair.gameObject.SetActive(false);
             }
             else
             {
@@ -95,7 +97,7 @@ public class PlayerInteract : MonoBehaviour
                 journalOpen = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
-
+                crosshair.gameObject.SetActive(true);
             }
 
         }
