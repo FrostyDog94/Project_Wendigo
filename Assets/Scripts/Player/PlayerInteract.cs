@@ -35,7 +35,7 @@ public class PlayerInteract : MonoBehaviour
     float safeTimer;
     public float safeTime = 2;
     public bool safe;
-   
+
 
 
     private void Start()
@@ -44,19 +44,23 @@ public class PlayerInteract : MonoBehaviour
         safeTimer = safeTime;
         safe = false;
         Flashlight();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (safeTimer <= 0){
+        if (safeTimer <= 0)
+        {
             safe = false;
-        } else{
+        }
+        else
+        {
             safeTimer -= Time.deltaTime;
             safe = true;
         }
 
-        
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -72,25 +76,28 @@ public class PlayerInteract : MonoBehaviour
             Flashlight();
         }
 
-       
 
-        //Inventory
+
+        //Journal
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (journalOpen == false){
+            if (journalOpen == false)
+            {
                 inventory.SetActive(true);
                 journalOpen = true;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 crosshair.gameObject.SetActive(false);
-            } else{
+            }
+            else
+            {
                 inventory.SetActive(false);
                 journalOpen = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 crosshair.gameObject.SetActive(true);
             }
-            
+
         }
 
         //Map
@@ -117,7 +124,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Wendigo" && flashlightActive)
+        if (collision.transform.tag == "Wendigo" && flashlightActive)
         {
             gameOverScreen.SetActive(true);
             collision.transform.gameObject.SetActive(false);
@@ -168,7 +175,8 @@ public class PlayerInteract : MonoBehaviour
         //Open doors
         if (hit.transform != null)
         {
-            if (hit.transform.GetComponent<DialogueTrigger>()) {
+            if (hit.transform.GetComponent<DialogueTrigger>())
+            {
                 hit.transform.GetComponent<DialogueTrigger>().TriggerDialogue();
             }
             if (hit.transform.tag == "Door")
@@ -181,7 +189,7 @@ public class PlayerInteract : MonoBehaviour
             }
             else if (hit.transform.tag == "Locked Door")
             {
-                aud.PlayOneShot(doorLocked, 1);
+                aud.PlayOneShot(doorLocked, 0.3f);
             }
 
             //Inventory Pickup
@@ -228,12 +236,17 @@ public class PlayerInteract : MonoBehaviour
             {
                 StoryManager.Instance.badRitual = true;
             }
+            else if (hit.transform.tag == "bills")
+            {
+                StoryManager.Instance.bills = true;
+            }
         }
         StoryManager.Instance.CheckInventory();
         JournalManager.Instance.checkJournal();
     }
 
-    public void MainMenu(){
+    public void MainMenu()
+    {
         SceneManager.LoadScene(0);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

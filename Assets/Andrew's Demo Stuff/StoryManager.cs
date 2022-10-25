@@ -7,11 +7,15 @@ public class StoryManager : MonoBehaviour
     public static StoryManager Instance { get; private set; }
 
     public bool book;
+    public GameObject bookObject;
+    public bool bills;
     public bool hotelKey;
     public bool journal;
     public bool altar;
     public bool bookKey;
+    public GameObject bookKeyObject;
     public bool bottle;
+    public GameObject bottleObject;
     public bool blood;
     public bool ritual;
     public bool badBlood;
@@ -70,7 +74,7 @@ public class StoryManager : MonoBehaviour
 
 
 
-    void Awake() 
+    void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
@@ -115,13 +119,14 @@ public class StoryManager : MonoBehaviour
         if (hotelKey)
         {
             door.tag = "Door";
-            
+
         }
 
         //Katie 
         if (book)
         {
             katieTrigger._dialogue = katieDialogue2; //Goto Hospital
+            Destroy(bookObject);
         }
         else
         {
@@ -133,6 +138,11 @@ public class StoryManager : MonoBehaviour
         if (journal && altar)
         {
             secretPassage.GetComponent<Animator>().SetBool("isOpen", true);
+        }
+
+        if (bookKey)
+        {
+            Destroy(bookKeyObject);
         }
 
         //Ritual
@@ -149,6 +159,11 @@ public class StoryManager : MonoBehaviour
 
             Instantiate(father2, fatherPos, fatherRot);
             Destroy(father1);
+        }
+
+        if (bottle)
+        {
+            Destroy(bottleObject);
         }
 
         if (blood && badBlood == false && GameObject.Find("Ritual2(Clone)") == null)
@@ -168,13 +183,15 @@ public class StoryManager : MonoBehaviour
         {
             Instantiate(ritual3, ritualPos, ritualRot);
             Destroy(ritual1);
-            
+
         }
 
         if (badRitual)
         {
             endWendigo.SetActive(true);
         }
+
+
 
 
 
