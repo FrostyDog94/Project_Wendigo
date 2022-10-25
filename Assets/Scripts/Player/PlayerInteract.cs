@@ -42,6 +42,7 @@ public class PlayerInteract : MonoBehaviour
         safeTimer = safeTime;
         safe = false;
         Flashlight();
+        Time.timeScale = 1;
 
     }
 
