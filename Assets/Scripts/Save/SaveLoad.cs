@@ -44,17 +44,17 @@ public class SaveLoad : MonoBehaviour
         SaveData data = SaveSystem.LoadGameData();
 
 
-        storyManager.book = data.book;
-        storyManager.bills = data.bills;
-        storyManager.hotelKey = data.hotelKey;
-        storyManager.journal = data.journal;
-        storyManager.altar = data.altar;
-        storyManager.bookKey = data.bookKey;
-        storyManager.bottle = data.bottle;
-        storyManager.blood = data.blood;
-        storyManager.ritual = data.ritual;
-        storyManager.badBlood = data.badBlood;
-        storyManager.badRitual = data.badRitual;
+        storyManager.saveData.book = data.book;
+        storyManager.saveData.bills = data.bills;
+        storyManager.saveData.hotelKey = data.hotelKey;
+        storyManager.saveData.journal = data.journal;
+        storyManager.saveData.altar = data.altar;
+        storyManager.saveData.bookKey = data.bookKey;
+        storyManager.saveData.bottle = data.bottle;
+        storyManager.saveData.blood = data.blood;
+        storyManager.saveData.ritual = data.ritual;
+        storyManager.saveData.badBlood = data.badBlood;
+        storyManager.saveData.badRitual = data.badRitual;
 
         Vector3 playerPosition;
 
