@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class StoryManager : MonoBehaviour
 {
@@ -63,7 +64,10 @@ public class StoryManager : MonoBehaviour
 
     public GameObject endWendigo;
 
-    public GameObject goodEnding;
+    public GameObject goodEndingCutscene;
+    public GameObject playerCamera;
+    public GameObject cutsceneCamera;
+
 
 
 
@@ -167,8 +171,10 @@ public class StoryManager : MonoBehaviour
 
         if (saveData.ritual)
         {
-            goodEnding.SetActive(true);
-            anim.SetBool("isEnd", true);
+            goodEndingCutscene.SetActive(true);
+            playerCamera.SetActive(false);
+            cutsceneCamera.SetActive(true);
+            //anim.SetBool("isEnd", true);
         }
 
         //Bad Ending

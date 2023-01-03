@@ -111,4 +111,9 @@ public class TimeController : MonoBehaviour
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.skybox.SetFloat("_Exposure", Mathf.Lerp(nightExposure, dayExposure, lightChangeCurve.Evaluate(dotProduct)));
     }
+
+    public void triggerDaytime() {
+        currentTime = DateTime.Now.Date + TimeSpan.FromHours(9);
+        timeMultiplier = 500;
+    }
 }
