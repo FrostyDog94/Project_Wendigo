@@ -15,7 +15,7 @@ MonoBehaviour:
   speaker: Bills
   lines:
   - These are bills. And they're all past due.
-  - '"Eden Memorial Hospital:
+  - '"Elliot Memorial Hospital:
 
     Treatment: $75,000"'
   - '"Mortgage

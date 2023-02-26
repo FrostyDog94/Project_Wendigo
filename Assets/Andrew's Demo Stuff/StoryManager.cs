@@ -6,13 +6,9 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance { get; private set; }
     public SaveData saveData;
-
     public GameObject bookObject;
-
     public GameObject bookKeyObject;
-
     public GameObject bottleObject;
-
 
     public GameObject secretPassage;
 
