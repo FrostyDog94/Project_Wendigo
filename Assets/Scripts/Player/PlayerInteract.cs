@@ -130,13 +130,14 @@ public class PlayerInteract : MonoBehaviour
         if (collision.transform.tag == "Wendigo" && flashlightActive)
         {
             gameOverScreen.SetActive(true);
-            collision.transform.gameObject.SetActive(false);
+            //collision.transform.gameObject.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             wendigoController.enabled = false;
             wendigoController.footstepsAudSrc.volume = 0;
             crosshair.gameObject.SetActive(false);
-            gameObject.SetActive(false);
+            // disable player interact script
+            this.enabled = false;
         }
 
 
@@ -206,6 +207,8 @@ public class PlayerInteract : MonoBehaviour
             else if (hit.transform.tag == "hotel key")
             {
                 StoryManager.Instance.saveData.hotelKey = true;
+                // remove dialogue from coat after picking up key
+                Destroy(hit.transform.GetComponent<DialogueTrigger>());
             }
             else if (hit.transform.tag == "journal")
             {

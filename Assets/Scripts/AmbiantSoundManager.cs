@@ -27,7 +27,6 @@ public class AmbiantSoundManager : MonoBehaviour
         musicTimer = musicTime;
         dayAudio.volume = 0;
         nightAudio.volume = 0;
-
     }
 
     private void Update()
@@ -55,7 +54,6 @@ public class AmbiantSoundManager : MonoBehaviour
         {
             dayAudio.volume = Mathf.Lerp(0, 0.5f, audioChangeCurve.Evaluate(timeController.dotProduct));
             nightAudio.volume = Mathf.Lerp(0.5f, 0, audioChangeCurve.Evaluate(timeController.dotProduct));
-
         }
     }
 
