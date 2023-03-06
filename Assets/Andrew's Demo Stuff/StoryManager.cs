@@ -65,8 +65,6 @@ public class StoryManager : MonoBehaviour
     public GameObject endWendigo;
 
     public GameObject goodEndingCutscene;
-    public GameObject playerCamera;
-    public GameObject cutsceneCamera;
 
 
 
@@ -172,9 +170,7 @@ public class StoryManager : MonoBehaviour
         if (saveData.ritual)
         {
             goodEndingCutscene.SetActive(true);
-            playerCamera.SetActive(false);
-            cutsceneCamera.SetActive(true);
-            //anim.SetBool("isEnd", true);
+            anim.SetTrigger("FadeToBlack");
         }
 
         //Bad Ending

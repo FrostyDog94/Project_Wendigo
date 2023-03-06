@@ -23,7 +23,12 @@ public class Crosshair : MonoBehaviour
     {
         RaycastHit hit;
         Physics.Raycast(playerInteract.cam.position, playerInteract.cam.TransformDirection(Vector3.forward), out hit, playerInteract.interactDistance);
-        if (hit.transform != null && (hit.transform.tag == "Door" || hit.transform.tag == "Locked Door" || hit.transform.gameObject.GetComponent<DialogueTrigger>() != null))
+        if (hit.transform != null && 
+            (hit.transform.tag == "Door" 
+            || hit.transform.tag == "Locked Door" 
+            || hit.transform.tag == "ritual"
+            || hit.transform.tag == "bad ritual"
+            || hit.transform.gameObject.GetComponent<DialogueTrigger>() != null))
         {
             image.texture = inspectCrosshair;
         }

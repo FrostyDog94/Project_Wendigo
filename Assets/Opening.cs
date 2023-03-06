@@ -5,7 +5,12 @@ using UnityEngine;
 public class Opening : MonoBehaviour
 {
     public Crosshair crosshair;
+    public GameObject player;
 
+    void Start()
+    {
+        player.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -13,6 +18,7 @@ public class Opening : MonoBehaviour
         {
             gameObject.SetActive(false);
             crosshair.gameObject.SetActive(true);
+            player.SetActive(true);
         }
     }
 }

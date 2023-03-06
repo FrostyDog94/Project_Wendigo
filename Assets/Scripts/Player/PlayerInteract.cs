@@ -136,6 +136,7 @@ public class PlayerInteract : MonoBehaviour
             wendigoController.enabled = false;
             wendigoController.footstepsAudSrc.volume = 0;
             crosshair.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
 
 

@@ -7,6 +7,7 @@ public class AmbiantSoundManager : MonoBehaviour
     public AudioSource dayAudio;
     public AudioSource nightAudio;
     public AudioSource music;
+    public AudioSource birdsChirping;
 
     public TimeController timeController;
     public PlayerInteract playerInteract;
@@ -24,6 +25,8 @@ public class AmbiantSoundManager : MonoBehaviour
     void Start()
     {
         musicTimer = musicTime;
+        dayAudio.volume = 0;
+        nightAudio.volume = 0;
 
     }
 
@@ -65,6 +68,11 @@ public class AmbiantSoundManager : MonoBehaviour
     public void stopMusic()
     {
         music.Stop();
+    }
+
+    public void playBirds()
+    {
+        birdsChirping.Play();
     }
 
 
