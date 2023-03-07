@@ -129,15 +129,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (collision.transform.tag == "Wendigo" && flashlightActive)
         {
-            gameOverScreen.SetActive(true);
-            //collision.transform.gameObject.SetActive(false);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            wendigoController.enabled = false;
-            wendigoController.footstepsAudSrc.volume = 0;
-            crosshair.gameObject.SetActive(false);
-            // disable player interact script
-            this.enabled = false;
+            Die();
         }
 
 
@@ -228,7 +220,7 @@ public class PlayerInteract : MonoBehaviour
                 StoryManager.Instance.saveData.bottle = true;
                 Destroy(hit.transform.gameObject);
             }
-            else if (hit.transform.tag == "blood")
+            else if (hit.transform.tag == "blood" && StoryManager.Instance.saveData.badBlood == false)
             {
                 StoryManager.Instance.saveData.blood = true;
             }
@@ -236,7 +228,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 StoryManager.Instance.saveData.ritual = true;
             }
-            else if (hit.transform.tag == "bad blood")
+            else if (hit.transform.tag == "bad blood" && StoryManager.Instance.saveData.blood == false)
             {
                 StoryManager.Instance.saveData.badBlood = true;
             }
@@ -258,6 +250,19 @@ public class PlayerInteract : MonoBehaviour
         SceneManager.LoadScene(0);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Die()
+    {
+        gameOverScreen.SetActive(true);
+        //collision.transform.gameObject.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        wendigoController.enabled = false;
+        wendigoController.footstepsAudSrc.volume = 0;
+        crosshair.gameObject.SetActive(false);
+        // disable player interact script
+        this.enabled = false;
     }
 
 }

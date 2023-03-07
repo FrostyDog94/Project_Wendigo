@@ -45,6 +45,7 @@ public class StoryManager : MonoBehaviour
 
     public GameObject father1;
     public GameObject father2;
+    private GameObject father2Instance;
     Vector3 fatherPos;
     Quaternion fatherRot;
 
@@ -55,6 +56,7 @@ public class StoryManager : MonoBehaviour
     //Blood
     public GameObject bed1;
     public GameObject bed2;
+    private GameObject bed2Instance;
     Vector3 bedPos;
     Quaternion bedRot;
 
@@ -145,10 +147,10 @@ public class StoryManager : MonoBehaviour
 
         if (saveData.bottle && GameObject.Find("Bed2(Clone)") == null && GameObject.Find("Father2(Clone)") == null)
         {
-            Instantiate(bed2, bedPos, bedRot);
+            bed2Instance = Instantiate(bed2, bedPos, bedRot);
             Destroy(bed1);
 
-            Instantiate(father2, fatherPos, fatherRot);
+            father2Instance = Instantiate(father2, fatherPos, fatherRot);
             Destroy(father1);
         }
 
@@ -161,6 +163,9 @@ public class StoryManager : MonoBehaviour
         {
             Instantiate(ritual2, ritualPos, ritualRot);
             Destroy(ritual1);
+            // after collecting blood, remove ability to interact with either blood
+            Destroy(bed2Instance.gameObject.GetComponentsInChildren<DialogueTrigger>()[0]);
+            Destroy(father2Instance.gameObject.GetComponentsInChildren<DialogueTrigger>()[0]);
         }
 
         if (saveData.ritual)
@@ -174,7 +179,9 @@ public class StoryManager : MonoBehaviour
         {
             Instantiate(ritual3, ritualPos, ritualRot);
             Destroy(ritual1);
-
+            // after collecting blood, remove ability to interact with either blood
+            Destroy(bed2Instance.gameObject.GetComponentsInChildren<DialogueTrigger>()[0]);
+            Destroy(father2Instance.gameObject.GetComponentsInChildren<DialogueTrigger>()[0]);
         }
 
         if (saveData.badRitual)

@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EndigoController : MonoBehaviour
 {
     public GameObject player;
+    public GameObject playerCamera;
     public LayerMask obstructionMask;
     NavMeshAgent agent;
     Animator anim;
@@ -69,13 +70,13 @@ public class EndigoController : MonoBehaviour
 
     private void FOVCheck()
     {
-        Vector3 directionToTarget = (transform.position - player.transform.position).normalized;
+        Vector3 directionToTarget = (transform.position - playerCamera.transform.position).normalized;
 
-        if(Vector3.Angle(player.transform.forward, directionToTarget) < 90)
+        if(Vector3.Angle(playerCamera.transform.forward, directionToTarget) < 45)
         {
-            float distanceToTarget = Vector3.Distance(player.transform.position, transform.position);
+            float distanceToTarget = Vector3.Distance(playerCamera.transform.position, transform.position);
 
-            if (!Physics.Raycast(player.transform.position, directionToTarget, distanceToTarget, obstructionMask))
+            if (!Physics.Raycast(playerCamera.transform.position, directionToTarget, distanceToTarget, obstructionMask))
             {
                 playerHasSeenWendigo = true;
             }
@@ -86,11 +87,9 @@ public class EndigoController : MonoBehaviour
     {
         if(collision.transform.tag == "Player")
         {
-            gameOverScreen.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            this.enabled = false;
+            player.gameObject.GetComponent<PlayerInteract>().Die();
             footstepsAudSrc.volume = 0;
+            this.enabled = false;
         }
 
 
