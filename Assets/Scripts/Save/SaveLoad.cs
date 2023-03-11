@@ -11,6 +11,7 @@ public class SaveLoad : MonoBehaviour
     public WendigoController wendigo;
 
     public GameObject opening;
+    public GameObject playerObject;
 
 
     void Start()
@@ -74,6 +75,8 @@ public class SaveLoad : MonoBehaviour
         player.flashlightActive = true;
 
         opening.SetActive(false);
+        playerObject.SetActive(true);
+        Time.timeScale = 1;
 
     }
 
